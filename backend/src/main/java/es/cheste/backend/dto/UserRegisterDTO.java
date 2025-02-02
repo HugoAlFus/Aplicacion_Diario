@@ -2,17 +2,17 @@ package es.cheste.backend.dto;
 
 import java.util.Objects;
 
-public class UserRegistrerDTO {
+public class UserRegisterDTO {
 
     private String username;
     private String email;
     private String password;
 
-    public UserRegistrerDTO() {
+    public UserRegisterDTO() {
         super();
     }
 
-    public UserRegistrerDTO(String username, String email, String password) {
+    public UserRegisterDTO(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -22,7 +22,7 @@ public class UserRegistrerDTO {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        UserRegistrerDTO that = (UserRegistrerDTO) o;
+        UserRegisterDTO that = (UserRegisterDTO) o;
         return Objects.equals(username, that.username) && Objects.equals(email, that.email) && Objects.equals(password, that.password);
     }
 
