@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="733.0" prefWidth="500.0" style="-fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Start">
+   <children>
+      <Pane prefHeight="733.0" prefWidth="500.0" style="-fx-background-radius: 30; -fx-border-radius: 30;">
+         <children>
+            <ImageView fitHeight="294.0" fitWidth="260.0" layoutX="111.0" layoutY="131.0">
+               <image>
+                  <Image url="@static/logo.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="64.0" layoutY="473.0" prefHeight="76.0" prefWidth="390.0">
+               <children>
+                  <Button fx:id="btnLogin" layoutX="13.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClick" prefHeight="43.0" prefWidth="364.0" style="-fx-background-color: #677DAC; -fx-background-radius: 20;" text="LOG IN" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="64.0" layoutY="549.0" prefHeight="76.0" prefWidth="390.0">
+               <children>
+                  <Button fx:id="btnCreateAccount" layoutX="13.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClick" prefHeight="43.0" prefWidth="364.0" style="-fx-background-color: #E67856; -fx-background-radius: 20;" text="CREATE ACCOUNT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Label layoutX="127.0" layoutY="28.0" text="My Diary">
+               <font>
+                  <Font name="Century" size="64.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -22,7 +22,7 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable) // Desactiva CSRF
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/api/users/register", "/api/users", "/api/users/", "/api/users/login").permitAll()
+                        .requestMatchers("/api/users/register", "/api/public/**", "/api/users/login").permitAll()
                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults()); // Usa el nuevo método para httpBasic

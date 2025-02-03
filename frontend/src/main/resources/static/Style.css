@@ -1,0 +1,8 @@
+.text-field {
+    -fx-text-fill: white;
+}
+
+.text-field .text {
+    -fx-fill: white;
+    -fx-opacity: 1;
+}
