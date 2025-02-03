@@ -11,6 +11,7 @@ import es.cheste.backend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -30,7 +31,8 @@ public class DiaryEntryService {
         DiaryEntry entry = new DiaryEntry();
         entry.setTitle(entryDTO.getTitle());
         entry.setContent(entryDTO.getContent());
-        entry.setCreatedAt(LocalDateTime.now());
+        entry.setCreatedAt(LocalDate.now());
+        entry.setFilePaths(entryDTO.getFilePaths());
         entry.setUser(user);
 
         return diaryEntryRepository.save(entry);
@@ -49,6 +51,9 @@ public class DiaryEntryService {
         }
         if (entryDTO.getContent() != null) {
             entry.setContent(entryDTO.getContent());
+        }
+        if(entryDTO.getFilePaths() != null){
+            entry.setFilePaths(entryDTO.getFilePaths());
         }
 
         return diaryEntryRepository.save(entry);

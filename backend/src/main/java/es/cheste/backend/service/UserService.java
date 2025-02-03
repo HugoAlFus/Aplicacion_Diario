@@ -58,9 +58,10 @@ public class UserService {
 
         User user = userRepository.findById(userId).orElseThrow(() -> new UserNotFoundException("User not found"));
 
-        if (userUpdatePasswordDTO.getNewPassword() != null){
-            user.setPassword(passwordEncoder.encode(userUpdatePasswordDTO.getNewPassword()));
+        if (passwordEncoder.matches(userUpdatePasswordDTO.getNewPassword(), user.getPassword())) {
+            throw new InvalidCredentialsException("The new password is already in use");
         }
+            user.setPassword(passwordEncoder.encode(userUpdatePasswordDTO.getNewPassword()));
 
         return userRepository.save(user);
     }

@@ -2,7 +2,8 @@ package es.cheste.backend.model;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -19,7 +20,10 @@ public class DiaryEntry {
     private String content;
 
     @Column(name = "CREATED_AT")
-    private LocalDateTime createdAt;
+    private LocalDate createdAt;
+
+    @ElementCollection
+    private List<String> filePaths;
 
     @ManyToOne
     @JoinColumn(name = "USER_ID", nullable = false)
@@ -29,15 +33,16 @@ public class DiaryEntry {
         super();
     }
 
-    public DiaryEntry(String title, String content, User user) {
+    public DiaryEntry(String title, String content, List<String> filePaths, User user) {
         this.title = title;
+        this.createdAt = LocalDate.now();
         this.content = content;
+        this.filePaths = filePaths;
         this.user = user;
-        this.createdAt = LocalDateTime.now();
     }
 
-    public DiaryEntry(Long id, String title, String content, User user) {
-        this(title, content, user);
+    public DiaryEntry(Long id, String title, String content, User user, List<String> filePaths) {
+        this(title, content, filePaths, user);
         this.id = id;
     }
 
@@ -78,11 +83,11 @@ public class DiaryEntry {
         this.content = content;
     }
 
-    public LocalDateTime getCreatedAt() {
+    public LocalDate getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
+    public void setCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -94,6 +99,14 @@ public class DiaryEntry {
         this.user = user;
     }
 
+    public List<String> getFilePaths() {
+        return filePaths;
+    }
+
+    public void setFilePaths(List<String> filePaths) {
+        this.filePaths = filePaths;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("DiaryEntry{");
@@ -101,6 +114,7 @@ public class DiaryEntry {
         sb.append(", title='").append(title).append('\'');
         sb.append(", content='").append(content).append('\'');
         sb.append(", createdAt=").append(createdAt);
+        sb.append(", filePaths=").append(filePaths);
         sb.append(", user=").append(user);
         sb.append('}');
         return sb.toString();

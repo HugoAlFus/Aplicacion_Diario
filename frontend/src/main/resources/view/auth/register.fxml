@@ -22,49 +22,49 @@
             </Label>
             <Pane layoutX="38.0" layoutY="275.0" prefHeight="80.0" prefWidth="424.0">
                <children>
-                  <TextField fx:id="tfUsername" alignment="CENTER" layoutX="30.0" layoutY="23.0" prefHeight="43.0" prefWidth="364.0" promptText="Username" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-color: #849AC5; -fx-border-width: 2;" stylesheets="@static/Style.css">
+                  <TextField fx:id="tfUsername" alignment="CENTER" layoutX="30.0" layoutY="23.0" prefHeight="43.0" prefWidth="364.0" promptText="Username" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-color: #849AC5; -fx-border-width: 2;" stylesheets="@../../static/Style.css">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="52.0" layoutY="30.0">
                      <image>
-                        <Image url="@static/img_user.png" />
+                        <Image url="@../../static/img_user.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
             <Pane layoutX="38.0" layoutY="358.0" prefHeight="80.0" prefWidth="424.0">
                <children>
-                  <TextField fx:id="tfEmail" alignment="CENTER" layoutX="30.0" layoutY="23.0" prefHeight="43.0" prefWidth="364.0" promptText="E-mail" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-color: #849AC5; -fx-border-width: 2;" stylesheets="@static/Style.css">
+                  <TextField fx:id="tfEmail" alignment="CENTER" layoutX="30.0" layoutY="23.0" prefHeight="43.0" prefWidth="364.0" promptText="E-mail" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-color: #849AC5; -fx-border-width: 2;" stylesheets="@../../static/Style.css">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
                   <ImageView fx:id="tfEmail" fitHeight="30.0" fitWidth="30.0" layoutX="52.0" layoutY="30.0">
                      <image>
-                        <Image url="@static/img_e-mail.png" />
+                        <Image url="@../../static/img_e-mail.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
             <Pane layoutX="38.0" layoutY="441.0" prefHeight="80.0" prefWidth="424.0">
                <children>
-                  <PasswordField fx:id="pfPassword" alignment="CENTER" layoutX="30.0" layoutY="23.0" prefHeight="43.0" prefWidth="364.0" promptText="Password" style="-fx-background-color: #849AC5; -fx-border-color: white; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20;" stylesheets="@static/Style.css">
+                  <PasswordField fx:id="pfPassword" alignment="CENTER" layoutX="30.0" layoutY="23.0" prefHeight="43.0" prefWidth="364.0" promptText="Password" style="-fx-background-color: #849AC5; -fx-border-color: white; -fx-border-radius: 20; -fx-border-width: 2; -fx-background-radius: 20;" stylesheets="@../../static/Style.css">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </PasswordField>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="52.0" layoutY="30.0">
                      <image>
-                        <Image url="@static/img_lock.png" />
+                        <Image url="@../../static/img_lock.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
             <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="150.0" layoutY="83.0">
                <image>
-                  <Image url="@static/img_book.png" />
+                  <Image url="@../../static/img_book.png" />
                </image>
             </ImageView>
             <Pane layoutX="55.0" layoutY="543.0" prefHeight="76.0" prefWidth="390.0">

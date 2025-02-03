@@ -1,6 +1,8 @@
 package es.cheste.backend.dto;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Objects;
 
 public class DiaryEntryDTO {
@@ -8,21 +10,23 @@ public class DiaryEntryDTO {
     private Long id;
     private String title;
     private String content;
-    private LocalDateTime createdAt;
+    private LocalDate createdAt;
+    private List<String> filePaths;
 
     public DiaryEntryDTO() {
         super();
     }
 
-    public DiaryEntryDTO(Long id, String title, String content, LocalDateTime createdAt) {
-        this(createdAt, content, title);
+    public DiaryEntryDTO(Long id, String title, String content, LocalDate createdAt, List<String> filePaths) {
+        this(createdAt, content, title, filePaths);
         this.id = id;
     }
 
-    public DiaryEntryDTO(LocalDateTime createdAt, String content, String title) {
+    public DiaryEntryDTO(LocalDate createdAt, String content, String title, List<String> filePaths) {
         this.createdAt = createdAt;
         this.content = content;
         this.title = title;
+        this.filePaths = filePaths;
     }
 
     @Override
@@ -62,12 +66,20 @@ public class DiaryEntryDTO {
         this.content = content;
     }
 
-    public LocalDateTime getCreatedAt() {
+    public LocalDate getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
+    public void setCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public List<String> getFilePaths() {
+        return filePaths;
+    }
+
+    public void setFilePaths(List<String> filePaths) {
+        this.filePaths = filePaths;
     }
 
     @Override
@@ -77,6 +89,7 @@ public class DiaryEntryDTO {
         sb.append(", title='").append(title).append('\'');
         sb.append(", content='").append(content).append('\'');
         sb.append(", createdAt=").append(createdAt);
+        sb.append(", filePaths=").append(filePaths);
         sb.append('}');
         return sb.toString();
     }
