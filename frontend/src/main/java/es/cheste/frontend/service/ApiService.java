@@ -7,9 +7,8 @@ import java.net.http.HttpResponse;
 
 public class ApiService {
 
-    private static final String BASE_URL = "http://localhost:8080";  // URL del backend
+    private static final String BASE_URL = "http://localhost:8080";
 
-    // Método para obtener datos (GET)
     public String get(String endpoint) throws Exception {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -21,7 +20,6 @@ public class ApiService {
         return response.body();
     }
 
-    // Método para enviar datos (POST)
     public String post(String endpoint, String jsonBody) throws Exception {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()

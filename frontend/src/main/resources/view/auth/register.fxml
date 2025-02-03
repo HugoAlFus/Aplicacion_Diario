@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="733.0" prefWidth="500.0" style="-fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.cheste.frontend.view.Register">
+<AnchorPane prefHeight="733.0" prefWidth="500.0" style="-fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.cheste.frontend.controller.RegisterController">
    <children>
       <Pane prefHeight="733.0" prefWidth="500.0" style="-fx-background-color: #8DA4CE; -fx-background-radius: 30; -fx-border-radius: 30;">
          <children>
@@ -41,7 +40,7 @@
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <ImageView fx:id="tfEmail" fitHeight="30.0" fitWidth="30.0" layoutX="52.0" layoutY="30.0">
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="52.0" layoutY="30.0">
                      <image>
                         <Image url="@../../static/img_e-mail.png" />
                      </image>

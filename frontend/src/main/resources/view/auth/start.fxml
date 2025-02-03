@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="733.0" prefWidth="500.0" style="-fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Start">
+<AnchorPane prefHeight="733.0" prefWidth="500.0" style="-fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.cheste.frontend.controller.StartController">
    <children>
       <Pane prefHeight="733.0" prefWidth="500.0" style="-fx-background-radius: 30; -fx-border-radius: 30;">
          <children>
