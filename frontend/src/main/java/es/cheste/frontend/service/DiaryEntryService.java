@@ -34,11 +34,27 @@ public class DiaryEntryService {
         return response.body();
     }
 
-    public String deleteEntry(Long userId, Long entryId) {
+    public String deleteEntry(Long userId, Long entryId) throws IOException, InterruptedException {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(BASE_URL + entryId + "?userId=" + userId))
+                .header("Content-Type", "application/json")
+                .DELETE()
+                .build();
 
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        return response.body();
     }
 
-    public String getEntriesByUserId(Long userId) {
+    public String getEntriesByUserId(Long userId) throws IOException, InterruptedException {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(BASE_URL + "?userId=" + userId))
+                .header("Content-Type", "application/json")
+                .GET()
+                .build();
 
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        return response.body();
     }
 }
