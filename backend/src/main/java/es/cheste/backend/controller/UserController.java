@@ -18,7 +18,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<UserDTO> registerUser(@RequestBody UserRegisterDTO userDTO){
+    public ResponseEntity<UserDTO> registerUser(@RequestBody UserRegisterDTO userDTO) throws RuntimeException{
 
         User user = userService.registerUser(userDTO);
 

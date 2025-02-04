@@ -8,6 +8,8 @@ import es.cheste.backend.exception.UserAlreadyExistsException;
 import es.cheste.backend.exception.UserNotFoundException;
 import es.cheste.backend.model.User;
 import es.cheste.backend.repository.UserRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,7 @@ import java.time.LocalDateTime;
 @Service
 public class UserService {
 
+    private static final Logger LOGGER = LogManager.getLogger(UserService.class);
     @Autowired
     private UserRepository userRepository;
 
@@ -26,7 +29,9 @@ public class UserService {
 
     public User registerUser(UserRegisterDTO userDTO) {
 
+        LOGGER.error(userRepository.findByUsername(userDTO.getUsername()));
         if (userRepository.findByUsername(userDTO.getUsername()) != null) {
+            LOGGER.error("Username in the dataBase");
             throw new UserAlreadyExistsException("The username is already in use");
         }
 
