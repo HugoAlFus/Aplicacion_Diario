@@ -25,7 +25,7 @@ public class User {
     private String email;
 
     @Column(name = "CREATED_AT")
-    private LocalDateTime createdAt;
+    private LocalDate createdAt;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<DiaryEntry> diaryEntries;
@@ -38,7 +38,7 @@ public class User {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.createdAt = LocalDateTime.now();
+        this.createdAt = LocalDate.now();
     }
 
     public User(Long id, String username, String password, String email) {
@@ -91,11 +91,11 @@ public class User {
         this.email = email;
     }
 
-    public LocalDateTime getCreatedAt() {
+    public LocalDate getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
+    public void setCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
     }
 
