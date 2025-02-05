@@ -60,12 +60,13 @@ public class DiaryEntry {
     }
 
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
+
 
     public String getTitle() {
         return title;

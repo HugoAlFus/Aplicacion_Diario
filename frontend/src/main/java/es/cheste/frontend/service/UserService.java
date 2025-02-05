@@ -1,5 +1,9 @@
 package es.cheste.frontend.service;
 
+import es.cheste.frontend.util.ErrorManagement;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -7,6 +11,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class UserService {
+
 
     private static final String BASE_URL = "http://localhost:8080/api/users";
 
@@ -19,6 +24,9 @@ public class UserService {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        ErrorManagement.errorManager(response);
+
         return response.body();
     }
 
@@ -43,6 +51,9 @@ public class UserService {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        ErrorManagement.errorManager(response);
+
         return response.body();
     }
 
@@ -54,6 +65,10 @@ public class UserService {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        ErrorManagement.errorManager(response);
+
         return response.body();
     }
+
 }

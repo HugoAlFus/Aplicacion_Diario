@@ -3,6 +3,8 @@ module frontend {
     requires javafx.fxml;
     requires javafx.controls;
     requires com.google.gson;
+    requires org.apache.logging.log4j;
+    requires org.jspecify;
 
     exports es.cheste.frontend;
     exports es.cheste.frontend.controller;

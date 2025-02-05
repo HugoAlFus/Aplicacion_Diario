@@ -1,5 +1,7 @@
 package es.cheste.frontend.service;
 
+import es.cheste.frontend.util.ErrorManagement;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -19,6 +21,9 @@ public class DiaryEntryService {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        ErrorManagement.errorManager(response);
+
         return response.body();
     }
 
@@ -31,6 +36,9 @@ public class DiaryEntryService {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        ErrorManagement.errorManager(response);
+
         return response.body();
     }
 
@@ -43,6 +51,9 @@ public class DiaryEntryService {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        ErrorManagement.errorManager(response);
+
         return response.body();
     }
 
@@ -55,6 +66,9 @@ public class DiaryEntryService {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        ErrorManagement.errorManager(response);
+
         return response.body();
     }
 }

@@ -8,10 +8,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
 public class RegisterController {
+
+    private static final Logger LOGGER = LogManager.getLogger(RegisterController.class);
+
     @javafx.fxml.FXML
     private TextField tfUsername;
     @javafx.fxml.FXML
@@ -20,10 +25,10 @@ public class RegisterController {
     private TextField tfEmail;
     @javafx.fxml.FXML
     private Button btnCreateAccount;
-
-    private final UserService userService = new UserService();
     @javafx.fxml.FXML
     private Label lbError;
+
+    private final UserService userService = new UserService();
 
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
@@ -38,7 +43,7 @@ public class RegisterController {
 
                 try {
 
-                    userService.registerUser(json);
+                    LOGGER.info(userService.registerUser(json));
 
                 } catch (InterruptedException | IOException e) {
                     lbError.setText(e.getMessage());
