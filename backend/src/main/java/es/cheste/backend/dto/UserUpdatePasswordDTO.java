@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class UserUpdatePasswordDTO {
 
+    private String email;
     private String oldPassword;
     private String newPassword;
 
@@ -11,9 +12,15 @@ public class UserUpdatePasswordDTO {
         super();
     }
 
-    public UserUpdatePasswordDTO(String oldPassword, String newPassword) {
+    public UserUpdatePasswordDTO(String email, String oldPassword, String newPassword) {
+        this.email = email;
         this.oldPassword = oldPassword;
         this.newPassword = newPassword;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(email);
     }
 
     @Override
@@ -21,12 +28,7 @@ public class UserUpdatePasswordDTO {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserUpdatePasswordDTO that = (UserUpdatePasswordDTO) o;
-        return Objects.equals(oldPassword, that.oldPassword) && Objects.equals(newPassword, that.newPassword);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(oldPassword, newPassword);
+        return Objects.equals(email, that.email);
     }
 
     public String getOldPassword() {
@@ -48,9 +50,18 @@ public class UserUpdatePasswordDTO {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("UserUpdatePasswordDTO{");
-        sb.append("oldPassword='").append(oldPassword).append('\'');
+        sb.append("email='").append(email).append('\'');
+        sb.append(", oldPassword='").append(oldPassword).append('\'');
         sb.append(", newPassword='").append(newPassword).append('\'');
         sb.append('}');
         return sb.toString();
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

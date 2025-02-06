@@ -42,10 +42,10 @@ public class UserService {
         return response.body();
     }
 
-    public String updateUser(Long userId, String jsonBody) throws IOException, InterruptedException {
+    public String updateUser(String jsonBody) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(BASE_URL + "/" + userId))
+                .uri(URI.create(BASE_URL))
                 .header("Content-Type", "application/json")
                 .PUT(HttpRequest.BodyPublishers.ofString(jsonBody))
                 .build();

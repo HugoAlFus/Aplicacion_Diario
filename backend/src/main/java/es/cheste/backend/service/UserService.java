@@ -15,7 +15,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Service
 public class UserService {
@@ -60,9 +59,13 @@ public class UserService {
         return user;
     }
 
-    public User updateUserPassword(Long userId, UserUpdatePasswordDTO userUpdatePasswordDTO) {
+    public User updateUserPassword(UserUpdatePasswordDTO userUpdatePasswordDTO) {
 
-        User user = userRepository.findById(userId).orElseThrow(() -> new UserNotFoundException("User not found"));
+        User user = userRepository.findByEmail(userUpdatePasswordDTO.getEmail());
+
+        if(user == null){
+            throw new UserNotFoundException("User not found");
+        }
 
         if (passwordEncoder.matches(userUpdatePasswordDTO.getNewPassword(), user.getPassword())) {
             throw new InvalidCredentialsException("The new password is already in use");

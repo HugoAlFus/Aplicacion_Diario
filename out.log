@@ -1,0 +1,2 @@
+2025-02-06 15:54:42,135 INFO e.c.f.c.RegisterController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-06 15:55:36,558 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}

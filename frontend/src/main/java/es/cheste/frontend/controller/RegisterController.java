@@ -4,10 +4,13 @@ import com.google.gson.Gson;
 import es.cheste.frontend.dto.UserRegisterDTO;
 import es.cheste.frontend.service.UserService;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -33,7 +36,7 @@ public class RegisterController {
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
 
-        if (actionEvent.getSource().equals(btnCreateAccount)) {
+        if (actionEvent.getSource() == btnCreateAccount) {
 
             if (tfUsername.getText() != null && pfPassword.getText() != null && tfEmail.getText() != null) {
 
