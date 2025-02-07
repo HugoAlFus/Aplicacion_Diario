@@ -5,6 +5,7 @@ module frontend {
     requires com.google.gson;
     requires org.apache.logging.log4j;
     requires org.jspecify;
+    requires java.desktop;
 
     exports es.cheste.frontend;
     exports es.cheste.frontend.controller;
