@@ -60,7 +60,7 @@ public class DiaryEntryService {
 
     public DiaryEntry searchEntryByUserAndDate(Long userId, LocalDate createdAt) {
 
-        return diaryEntryRepository.findByUserIdAndDate(userId, createdAt).
+        return diaryEntryRepository.findByUserIdAndCreatedAt(userId, createdAt).
                 orElseThrow(() -> new EntryNotFoundException("Entry not found for userId: " + userId + " and date: " + createdAt));
 
     }

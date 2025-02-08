@@ -1,6 +1,8 @@
 package es.cheste.frontend.util;
 
 import es.cheste.frontend.controller.DiaryAppController;
+import es.cheste.frontend.controller.ListEntriesController;
+import es.cheste.frontend.dto.DiaryEntryDTO;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -9,12 +11,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
+import java.util.List;
 
 public class WindowManagement {
 
     private static final Logger LOGGER = LogManager.getLogger(WindowManagement.class);
 
-    public static void openNewWindow(String path, String title, Stage currentStage, Object username){
+    public static void openNewWindow(String path, String title, Stage currentStage, Object object) {
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(WindowManagement.class.getResource(path));
             Parent root = fxmlLoader.load();
@@ -28,13 +31,22 @@ public class WindowManagement {
 
             Object controller = fxmlLoader.getController();
 
+            //TODO Problema aqui, no entra en el if
             if(controller instanceof DiaryAppController){
-                ((DiaryAppController) controller).setUsername((String) username);
+                ((DiaryAppController) controller).setUsername((String) object);
+            }
+
+            if (controller instanceof ListEntriesController) {
+                ((ListEntriesController) controller).setListEntry((List<DiaryEntryDTO>) object);
             }
 
             stage.setScene(scene);
             stage.show();
-            currentStage.close();
+
+            if (currentStage != null) {
+                currentStage.close();
+            }
+
         }catch (IOException e){
             LOGGER.error("An error occurred when trying to open the window.\nPath: {}\n Error: {}", path, e.getMessage());
             System.err.println("An error ocurred");

@@ -50,8 +50,11 @@ public class LoginController {
 
         String json = new Gson().toJson(user);
 
+        System.out.println(user);
+
         try {
             LOGGER.info(userService.loginUser(json));
+            WindowManagement.openNewWindow("/es/cheste/frontend/app/diaryApp.fxml", "My Diary", (Stage) btnLog.getScene().getWindow(), tfUsername.getText());
         } catch (InterruptedException | IOException e) {
 
             lbError.setText(e.getMessage());

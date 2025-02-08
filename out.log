@@ -1,2 +1,18 @@
 2025-02-06 15:54:42,135 INFO e.c.f.c.RegisterController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
 2025-02-06 15:55:36,558 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 11:28:13,600 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 11:30:17,330 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 11:30:17,438 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-08 11:30:17,438 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found 
+2025-02-08 11:32:14,169 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 11:32:14,197 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-08 11:32:14,197 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found 
+2025-02-08 11:33:29,644 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 11:33:29,671 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-08 11:33:29,671 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found 
+2025-02-08 11:36:08,893 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 11:36:08,954 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-08 11:36:08,955 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found 
+2025-02-08 11:38:40,043 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 11:38:40,099 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-08 11:38:40,100 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found 

@@ -4,12 +4,14 @@ import com.google.gson.Gson;
 import es.cheste.frontend.dto.DiaryEntryDTO;
 import es.cheste.frontend.service.DiaryEntryService;
 import es.cheste.frontend.service.UserService;
+import es.cheste.frontend.util.WindowManagement;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -53,6 +55,10 @@ public class DiaryAppController implements Initializable {
         if (actionEvent.getSource() == btnSave) {
             saveData();
         }
+
+        if (actionEvent.getSource() == btnList) {
+            listEntries();
+        }
     }
 
     private void saveData() {
@@ -77,8 +83,11 @@ public class DiaryAppController implements Initializable {
 
     private void listEntries(){
 
+        Gson json = new Gson();
+
         try {
-            diaryEntryService.getEntriesByUserId(userId);
+            List<DiaryEntryDTO> list = json.fromJson(diaryEntryService.getEntriesByUserId(userId), List.class);
+            WindowManagement.openNewWindow("/es/cheste/frontend/app/ListEntriesController.fxml", "Entries", (Stage) btnSave.getScene().getWindow(), list);
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }

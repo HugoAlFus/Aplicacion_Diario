@@ -13,7 +13,7 @@ public interface DiaryEntryRepository extends JpaRepository<DiaryEntry, Long> {
 
     List<DiaryEntry> findByUserIdAndTitleContainingIgnoreCase(Long userId, String title);
 
-    Optional<DiaryEntry> findByUserIdAndDate(Long userId, LocalDate createdAt);
+    Optional<DiaryEntry> findByUserIdAndCreatedAt(Long userId, LocalDate createdAt);
 
     void deleteByUserId(Long userId);
 }

@@ -3,11 +3,13 @@ package es.cheste.frontend.controller;
 import com.google.gson.Gson;
 import es.cheste.frontend.dto.UserUpdatePasswordDTO;
 import es.cheste.frontend.service.UserService;
+import es.cheste.frontend.util.WindowManagement;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -43,6 +45,7 @@ public class ChangePassword {
 
                 try {
                     LOGGER.info(userService.updateUser(json));
+                    WindowManagement.openNewWindow("/es/cheste/frontend/auth/login.fxml", "Login", (Stage) btnUpdatePassword.getScene().getWindow(), null);
                 } catch (InterruptedException | IOException e) {
                     lbError.setText(e.getMessage());
                     pfNewPassword.setText(null);

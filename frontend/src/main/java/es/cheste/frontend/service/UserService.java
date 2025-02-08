@@ -72,6 +72,9 @@ public class UserService {
     }
 
     public String getUserByUsername(String username) throws IOException, InterruptedException {
+
+        System.out.println(BASE_URL + username + "/id");
+
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(BASE_URL + username + "/id"))
