@@ -1,8 +1,6 @@
 package es.cheste.frontend.service;
 
 import es.cheste.frontend.util.ErrorManagement;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URI;
@@ -73,11 +71,9 @@ public class UserService {
 
     public String getUserByUsername(String username) throws IOException, InterruptedException {
 
-        System.out.println(BASE_URL + username + "/id");
-
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(BASE_URL + username + "/id"))
+                .uri(URI.create(BASE_URL + "/" + username + "/id"))
                 .header("Content-Type", "application/json")
                 .GET().build();
 

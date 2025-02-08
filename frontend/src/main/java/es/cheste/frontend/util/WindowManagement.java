@@ -1,8 +1,10 @@
 package es.cheste.frontend.util;
 
 import es.cheste.frontend.controller.DiaryAppController;
+import es.cheste.frontend.controller.EntryDetailsController;
 import es.cheste.frontend.controller.ListEntriesController;
 import es.cheste.frontend.dto.DiaryEntryDTO;
+import es.cheste.frontend.dto.UserLoginDTO;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -31,13 +33,14 @@ public class WindowManagement {
 
             Object controller = fxmlLoader.getController();
 
-            //TODO Problema aqui, no entra en el if
-            if(controller instanceof DiaryAppController){
-                ((DiaryAppController) controller).setUsername((String) object);
+            if (controller instanceof DiaryAppController) {
+                ((DiaryAppController) controller).initializeContent(((UserLoginDTO) object).getUsername());
             }
-
             if (controller instanceof ListEntriesController) {
-                ((ListEntriesController) controller).setListEntry((List<DiaryEntryDTO>) object);
+                ((ListEntriesController) controller).initializedContent((List<DiaryEntryDTO>) object);
+            }
+            if(controller instanceof EntryDetailsController){
+                ((EntryDetailsController) controller).initializeContent(((DiaryEntryDTO) object));
             }
 
             stage.setScene(scene);

@@ -16,7 +16,7 @@ public class EntryDetailsController {
     @javafx.fxml.FXML
     private Label lbEntryDay;
 
-    public void initialize(DiaryEntryDTO entry) {
+    public void initializeContent(DiaryEntryDTO entry) {
 
         tfTitle.setText(entry.getTitle());
         lbEntryDay.setText(entry.getCreatedAt().toString());

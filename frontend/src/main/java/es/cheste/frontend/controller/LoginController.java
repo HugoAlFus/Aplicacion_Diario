@@ -49,12 +49,9 @@ public class LoginController {
         UserLoginDTO user = new UserLoginDTO(tfUsername.getText(), pfPassword.getText());
 
         String json = new Gson().toJson(user);
-
-        System.out.println(user);
-
         try {
             LOGGER.info(userService.loginUser(json));
-            WindowManagement.openNewWindow("/es/cheste/frontend/app/diaryApp.fxml", "My Diary", (Stage) btnLog.getScene().getWindow(), tfUsername.getText());
+            WindowManagement.openNewWindow("/es/cheste/frontend/app/diaryApp.fxml", "My Diary", (Stage) btnLog.getScene().getWindow(), user);
         } catch (InterruptedException | IOException e) {
 
             lbError.setText(e.getMessage());

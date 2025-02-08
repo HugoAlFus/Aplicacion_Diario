@@ -16,3 +16,63 @@
 2025-02-08 11:38:40,043 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
 2025-02-08 11:38:40,099 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
 2025-02-08 11:38:40,100 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found 
+2025-02-08 21:28:35,860 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:28:45,025 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found null
+2025-02-08 21:30:28,339 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:31:36,742 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:32:12,466 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: User not found
+2025-02-08 21:32:16,048 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found User not found
+2025-02-08 21:33:01,942 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:33:15,535 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: User not found
+2025-02-08 21:33:15,535 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found User not found
+2025-02-08 21:33:34,421 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:35:47,552 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: User not found
+2025-02-08 21:35:47,552 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found User not found
+2025-02-08 21:35:58,426 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:36:05,067 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: User not found
+2025-02-08 21:36:05,067 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found User not found
+2025-02-08 21:40:08,048 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:40:08,084 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: User not found
+2025-02-08 21:40:08,084 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found User not found
+2025-02-08 21:44:05,444 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:44:05,471 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: User not found
+2025-02-08 21:44:05,471 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found User not found
+2025-02-08 21:45:09,826 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:45:09,856 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: User not found
+2025-02-08 21:45:09,856 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found User not found
+2025-02-08 21:52:07,073 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:52:07,092 ERROR e.c.f.u.WindowManagement [JavaFX Application Thread] An error occurred when trying to open the window.
+Path: /es/cheste/frontend/app/diaryApp.fxml
+ Error: Controller value already specified.
+/D:/2DAM/DI/Aplicacion_Diario/frontend/target/classes/es/cheste/frontend/app/diaryApp.fxml:15
+
+2025-02-08 21:53:40,588 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:58:55,122 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 21:58:55,149 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: User not found
+2025-02-08 21:58:55,149 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found User not found
+2025-02-08 22:05:25,391 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 22:05:25,468 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 6 and date: 2025-02-08
+2025-02-08 22:05:25,469 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 6 and date: 2025-02-08
+2025-02-08 22:08:04,651 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 22:08:04,694 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 6 and date: 2025-02-08
+2025-02-08 22:08:04,694 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 6 and date: 2025-02-08
+2025-02-08 22:13:34,588 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 22:13:34,640 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 6 and date: 2025-02-08
+2025-02-08 22:13:34,641 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 6 and date: 2025-02-08
+2025-02-08 22:13:38,016 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":3,"title":"dad","content":"sdadsadad","createdAt":"2025-02-08","filePaths":[]}
+2025-02-08 22:13:40,864 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-08 22:13:40,864 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
+2025-02-08 22:13:41,037 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-08 22:13:41,038 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
+2025-02-08 22:13:41,235 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-08 22:13:41,235 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
+2025-02-08 22:13:42,735 ERROR e.c.f.u.WindowManagement [JavaFX Application Thread] An error occurred when trying to open the window.
+Path: /es/cheste/frontend/app/ListEntriesController.fxml
+ Error: 
+/D:/2DAM/DI/Aplicacion_Diario/frontend/target/classes/es/cheste/frontend/app/ListEntriesController.fxml
+
+2025-02-08 22:18:47,496 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 22:18:49,750 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-08 22:18:49,750 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
+2025-02-08 22:24:46,180 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-08 22:28:10,391 INFO e.c.f.c.LoginController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}

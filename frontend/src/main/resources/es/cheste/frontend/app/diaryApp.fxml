@@ -20,7 +20,7 @@
                <children>
                   <Label fx:id="lbEntryDay" alignment="CENTER" layoutX="13.0" layoutY="8.0" prefHeight="80.0" prefWidth="455.0" style="-fx-border-color: white; -fx-border-width: 0 0 2 0;" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="Century" size="64.0" />
+                        <Font name="Century" size="50.0" />
                      </font>
                   </Label>
                </children>

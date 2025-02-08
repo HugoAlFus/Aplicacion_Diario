@@ -4,7 +4,6 @@ import es.cheste.frontend.dto.DiaryEntryDTO;
 import es.cheste.frontend.util.WindowManagement;
 import javafx.scene.control.ListView;
 
-import java.io.IOException;
 import java.util.List;
 
 public class ListEntriesController {
@@ -13,14 +12,12 @@ public class ListEntriesController {
 
     private List<DiaryEntryDTO> listEntry;
 
-    public void setListEntry(List<DiaryEntryDTO> listEntry) {
+    public void initializedContent(List<DiaryEntryDTO> listEntry) {
         this.listEntry = listEntry;
-    }
-
-    public void initialize() {
-
         loadEntries();
     }
+
+
 
     private void loadEntries() {
 
