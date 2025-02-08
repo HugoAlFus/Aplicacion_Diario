@@ -71,4 +71,18 @@ public class UserService {
         return response.body();
     }
 
+    public String getUserByUsername(String username) throws IOException, InterruptedException {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(BASE_URL + username + "/id"))
+                .header("Content-Type", "application/json")
+                .GET().build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        ErrorManagement.errorManager(response);
+
+        return response.body();
+    }
+
 }

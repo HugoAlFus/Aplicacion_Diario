@@ -40,4 +40,10 @@ public class UserController {
         UserDTO responseDTO = new UserDTO(user.getUsername(), user.getEmail());
         return ResponseEntity.ok(responseDTO);
     }
+
+    @GetMapping("/{username}/id")
+    public ResponseEntity<Long> getUserIdByUsername(@PathVariable String username) {
+        Long userId = userService.getUserByUsername(username);
+        return ResponseEntity.ok(userId);
+    }
 }

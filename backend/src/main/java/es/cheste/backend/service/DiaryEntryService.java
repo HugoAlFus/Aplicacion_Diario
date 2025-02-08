@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -57,6 +56,13 @@ public class DiaryEntryService {
         }
 
         return diaryEntryRepository.save(entry);
+    }
+
+    public DiaryEntry searchEntryByUserAndDate(Long userId, LocalDate createdAt) {
+
+        return diaryEntryRepository.findByUserIdAndDate(userId, createdAt).
+                orElseThrow(() -> new EntryNotFoundException("Entry not found for userId: " + userId + " and date: " + createdAt));
+
     }
 
     public void deleteEntry(Long entryId, Long userId) {

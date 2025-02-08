@@ -7,6 +7,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.LocalDate;
 
 public class DiaryEntryService {
 
@@ -70,5 +71,22 @@ public class DiaryEntryService {
         ErrorManagement.errorManager(response);
 
         return response.body();
+    }
+
+    public String findEntryByIdAndDate(Long userId, LocalDate date) throws IOException, InterruptedException {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(BASE_URL + "/by-date?userId=" + userId + "&date=" + date))
+                .header("Content-Type", "application/json")
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        ErrorManagement.errorManager(response);
+
+        return response.body();
+
+
     }
 }

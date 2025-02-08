@@ -38,23 +38,24 @@ public class LoginController {
         if(actionEvent.getSource() == btnLog){
 
             if(tfUsername.getText() != null && pfPassword.getText() != null){
-
-                UserLoginDTO user = new UserLoginDTO(tfUsername.getText(),pfPassword.getText());
-
-                String json = new Gson().toJson(user);
-
-                try{
-                    LOGGER.info(userService.loginUser(json));
-                } catch (InterruptedException | IOException e) {
-
-                    lbError.setText(e.getMessage());
-                    pfPassword.setText(null);
-                }
-
-
+                logUser();
             }
         } else if(actionEvent.getSource() == btnForgotPassword){
-            WindowManagement.openNewWindow("/es/cheste/frontend/auth/ChangePassword.fxml", "Change Password", (Stage) btnLog.getScene().getWindow());
+            WindowManagement.openNewWindow("/es/cheste/frontend/auth/ChangePassword.fxml", "Change Password", (Stage) btnLog.getScene().getWindow(), null);
+        }
+    }
+
+    private void logUser() {
+        UserLoginDTO user = new UserLoginDTO(tfUsername.getText(), pfPassword.getText());
+
+        String json = new Gson().toJson(user);
+
+        try {
+            LOGGER.info(userService.loginUser(json));
+        } catch (InterruptedException | IOException e) {
+
+            lbError.setText(e.getMessage());
+            pfPassword.setText(null);
         }
     }
 }

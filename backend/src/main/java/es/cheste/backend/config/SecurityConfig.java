@@ -22,7 +22,8 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/api/users/register", "/api/users" , "/api/users/login", "/api/entries", "/api/entries/{entryId}").permitAll()
+                        .requestMatchers("/api/users/register", "/api/users", "/api/users/{username}/id" , "/api/users/login",
+                                "/api/entries","/api/entries/by-date", "/api/entries/{entryId}").permitAll()
                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults());

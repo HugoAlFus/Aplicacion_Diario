@@ -1,5 +1,6 @@
 package es.cheste.frontend.util;
 
+import es.cheste.frontend.controller.DiaryAppController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,7 +14,7 @@ public class WindowManagement {
 
     private static final Logger LOGGER = LogManager.getLogger(WindowManagement.class);
 
-    public static void openNewWindow(String path, String title, Stage currentStage){
+    public static void openNewWindow(String path, String title, Stage currentStage, Object username){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(WindowManagement.class.getResource(path));
             Parent root = fxmlLoader.load();
@@ -24,6 +25,12 @@ public class WindowManagement {
 
             String css = WindowManagement.class.getResource("/es/cheste/frontend/css/Style.css").toExternalForm();
             scene.getStylesheets().add(css);
+
+            Object controller = fxmlLoader.getController();
+
+            if(controller instanceof DiaryAppController){
+                ((DiaryAppController) controller).setUsername((String) username);
+            }
 
             stage.setScene(scene);
             stage.show();

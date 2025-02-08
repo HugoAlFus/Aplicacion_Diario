@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "DIARY_ENTRY")
+@Table(name = "DIARY_ENTRY", uniqueConstraints = {@UniqueConstraint(columnNames = {"CREATED_AT", "USER_ID"})})
 public class DiaryEntry {
 
     @Id

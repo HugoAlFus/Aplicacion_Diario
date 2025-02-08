@@ -4,9 +4,11 @@ import es.cheste.backend.dto.DiaryEntryDTO;
 import es.cheste.backend.model.DiaryEntry;
 import es.cheste.backend.service.DiaryEntryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -59,5 +61,18 @@ public class DiaryEntryController {
                 ))
                 .collect(Collectors.toList());
         return ResponseEntity.ok(responseDTOs);
+    }
+
+    @GetMapping("/by-date")
+    public ResponseEntity<DiaryEntryDTO> getEntryByUserIdAndDate(@RequestParam Long userId, @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
+        DiaryEntry entry = diaryEntryService.searchEntryByUserAndDate(userId, date);
+        DiaryEntryDTO responseDTO = new DiaryEntryDTO(
+                entry.getId(),
+                entry.getTitle(),
+                entry.getContent(),
+                entry.getCreatedAt(),
+                entry.getFilePaths()
+        );
+        return ResponseEntity.ok(responseDTO);
     }
 }

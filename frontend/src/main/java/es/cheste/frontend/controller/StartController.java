@@ -16,10 +16,10 @@ public class StartController {
 
         if (actionEvent.getSource() == btnLogin) {
 
-            WindowManagement.openNewWindow("/es/cheste/frontend/auth/login.fxml", "Login", (Stage) btnLogin.getScene().getWindow());
+            WindowManagement.openNewWindow("/es/cheste/frontend/auth/login.fxml", "Login", (Stage) btnLogin.getScene().getWindow(), null);
 
         } else if(actionEvent.getSource() == btnCreateAccount) {
-            WindowManagement.openNewWindow("/es/cheste/frontend/auth/register.fxml", "Register",(Stage) btnLogin.getScene().getWindow());
+            WindowManagement.openNewWindow("/es/cheste/frontend/auth/register.fxml", "Register",(Stage) btnLogin.getScene().getWindow(), null);
         }
     }
 }
