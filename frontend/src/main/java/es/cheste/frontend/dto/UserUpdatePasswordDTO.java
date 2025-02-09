@@ -59,8 +59,6 @@ public class UserUpdatePasswordDTO {
     public String toString() {
         final StringBuilder sb = new StringBuilder("UserUpdatePasswordDTO{");
         sb.append("email='").append(email).append('\'');
-        sb.append(", oldPassword='").append(oldPassword).append('\'');
-        sb.append(", newPassword='").append(newPassword).append('\'');
         sb.append('}');
         return sb.toString();
     }

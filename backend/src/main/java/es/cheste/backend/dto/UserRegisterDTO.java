@@ -2,7 +2,7 @@ package es.cheste.backend.dto;
 
 import java.util.Objects;
 
-public class UserRegisterDTO {
+public class UserRegisterDTO implements IUserDTO {
 
     private String username;
     private String email;
@@ -60,7 +60,6 @@ public class UserRegisterDTO {
         final StringBuilder sb = new StringBuilder("UserRegistrerDTO{");
         sb.append("username='").append(username).append('\'');
         sb.append(", email='").append(email).append('\'');
-        sb.append(", password='").append(password).append('\'');
         sb.append('}');
         return sb.toString();
     }

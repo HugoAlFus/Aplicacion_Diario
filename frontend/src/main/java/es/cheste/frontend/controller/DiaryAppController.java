@@ -11,11 +11,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseButton;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -45,11 +48,13 @@ public class DiaryAppController {
     @javafx.fxml.FXML
     private Button btnAddFile;
 
-    private FileChooser fileChooser;
+    private FileChooser fileChooser = new FileChooser();
     private Long userId;
     private String username;
     private DiaryEntryDTO entryDTO;
     private List<String> listPaths = new ArrayList<>();
+    @javafx.fxml.FXML
+    private ListView<String> lvFiles;
 
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
@@ -93,7 +98,8 @@ public class DiaryAppController {
         File file = fileChooser.showOpenDialog(btnList.getScene().getWindow());
 
         if(file != null){
-            listPaths.add(file.getName());
+            listPaths.add(file.getAbsolutePath());
+            lvFiles.getItems().add(file.getName());
         }
     }
 
@@ -117,22 +123,47 @@ public class DiaryAppController {
         setEntryDTO();
         lbEntryDay.setText(setDate());
         initializePaths();
+        initializeListView();
 
         if (entryDTO != null) {
             setTfTitle();
             setTaContent();
+            setLvFiles();
         }
     }
 
     private void initializePaths(){
-        FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select a file");
 
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Text files", "*.txt"),
+                new FileChooser.ExtensionFilter("Text files", "*.txt", "*.pdf"),
                 new FileChooser.ExtensionFilter("Images", "*.png", "*.jpg", "*.jpeg"),
                 new FileChooser.ExtensionFilter("All files", "*.*")
         );
+    }
+
+    private void initializeListView() {
+        lvFiles.setOnMouseClicked(event -> {
+            if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
+                openFile(lvFiles.getSelectionModel().getSelectedItem());
+            }
+        });
+    }
+
+    private void openFile(String fileName) {
+        try {
+            for (String path : listPaths) {
+                if (path.endsWith(fileName)) {
+                    File file = new File(path);
+                    if (file.exists()) {
+                        Desktop.getDesktop().open(file);
+                    }
+                    break;
+                }
+            }
+        } catch (IOException e) {
+            LOGGER.error("Error opening file {}", e.getMessage());
+        }
     }
 
     private void setUserId() {
@@ -170,6 +201,12 @@ public class DiaryAppController {
 
     private void setTfTitle() {
         tfTitle.setText(entryDTO.getTitle());
+    }
+
+    private void setLvFiles() {
+        this.listPaths = entryDTO.getFilePaths();
+
+        listPaths.forEach(s -> lvFiles.getItems().add(new File(s).getName()));
     }
 
     private void setTaContent() {

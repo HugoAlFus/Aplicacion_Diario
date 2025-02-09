@@ -4,6 +4,7 @@ import es.cheste.frontend.controller.DiaryAppController;
 import es.cheste.frontend.controller.EntryDetailsController;
 import es.cheste.frontend.controller.ListEntriesController;
 import es.cheste.frontend.dto.DiaryEntryDTO;
+import es.cheste.frontend.dto.IUserDTO;
 import es.cheste.frontend.dto.UserLoginDTO;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -34,7 +35,7 @@ public class WindowManagement {
             Object controller = fxmlLoader.getController();
 
             if (controller instanceof DiaryAppController) {
-                ((DiaryAppController) controller).initializeContent(((UserLoginDTO) object).getUsername());
+                ((DiaryAppController) controller).initializeContent(((IUserDTO) object).getUsername());
             }
             if (controller instanceof ListEntriesController) {
                 ((ListEntriesController) controller).initializedContent((List<DiaryEntryDTO>) object);

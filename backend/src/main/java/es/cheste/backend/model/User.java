@@ -76,7 +76,7 @@ public class User {
     }
 
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
     public void setPassword(String password) {
@@ -112,10 +112,8 @@ public class User {
         final StringBuilder sb = new StringBuilder("User{");
         sb.append("id=").append(id);
         sb.append(", username='").append(username).append('\'');
-        sb.append(", password='").append(password).append('\'');
         sb.append(", email='").append(email).append('\'');
         sb.append(", createdAt=").append(createdAt);
-        sb.append(", diaryEntries=").append(diaryEntries);
         sb.append('}');
         return sb.toString();
     }

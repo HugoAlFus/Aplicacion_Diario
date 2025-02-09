@@ -37,20 +37,26 @@ public class ChangePassword {
 
         if (actionEvent.getSource() == btnUpdatePassword) {
 
-            if (tfEmail.getText() != null && pfCurrentPassword.getText() != null && pfNewPassword.getText() != null) {
+            if (!tfEmail.getText().isEmpty()|| !pfCurrentPassword.getText().isEmpty() || !pfNewPassword.getText().isEmpty()) {
 
-                UserUpdatePasswordDTO user = new UserUpdatePasswordDTO(tfEmail.getText(), pfCurrentPassword.getText(), pfNewPassword.getText());
+                if(pfCurrentPassword.getText().equals(pfNewPassword.getText())) {
+                    UserUpdatePasswordDTO user = new UserUpdatePasswordDTO(tfEmail.getText(), pfCurrentPassword.getText(), pfNewPassword.getText());
 
-                String json = new Gson().toJson(user);
+                    String json = new Gson().toJson(user);
 
-                try {
-                    LOGGER.info(userService.updateUser(json));
-                    WindowManagement.openNewWindow("/es/cheste/frontend/auth/login.fxml", "Login", (Stage) btnUpdatePassword.getScene().getWindow(), null);
-                } catch (InterruptedException | IOException e) {
-                    lbError.setText(e.getMessage());
+                    try {
+                        LOGGER.info(userService.updateUser(json));
+                        WindowManagement.openNewWindow("/es/cheste/frontend/auth/login.fxml", "Login", (Stage) btnUpdatePassword.getScene().getWindow(), null);
+                    } catch (InterruptedException | IOException e) {
+                        lbError.setText(e.getMessage());
+                        pfNewPassword.setText(null);
+                        pfCurrentPassword.setText(null);
+
+                    }
+                } else {
+                    lbError.setText("The password must be the same");
                     pfNewPassword.setText(null);
                     pfCurrentPassword.setText(null);
-
                 }
             }
         }

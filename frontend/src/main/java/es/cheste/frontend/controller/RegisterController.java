@@ -3,6 +3,7 @@ package es.cheste.frontend.controller;
 import com.google.gson.Gson;
 import es.cheste.frontend.dto.UserRegisterDTO;
 import es.cheste.frontend.service.UserService;
+import es.cheste.frontend.util.WindowManagement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
@@ -38,7 +39,7 @@ public class RegisterController {
 
         if (actionEvent.getSource() == btnCreateAccount) {
 
-            if (tfUsername.getText() != null && pfPassword.getText() != null && tfEmail.getText() != null) {
+            if (!tfUsername.getText().isEmpty() || !pfPassword.getText().isEmpty() || !tfEmail.getText().isEmpty()) {
 
                 UserRegisterDTO user = new UserRegisterDTO(tfUsername.getText(), tfEmail.getText(), pfPassword.getText());
 
@@ -47,6 +48,7 @@ public class RegisterController {
                 try {
 
                     LOGGER.info(userService.registerUser(json));
+                    WindowManagement.openNewWindow("/es/cheste/frontend/app/diaryApp.fxml", "My Diary", (Stage) tfEmail.getScene().getWindow(), user);
 
                 } catch (InterruptedException | IOException e) {
                     lbError.setText(e.getMessage());

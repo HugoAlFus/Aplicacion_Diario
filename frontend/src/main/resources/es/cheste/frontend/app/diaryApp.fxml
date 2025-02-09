@@ -3,6 +3,7 @@
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -34,7 +35,7 @@
                   <String fx:value="text" />
                </styleClass>
             </TextField>
-            <TextArea fx:id="taContent" layoutX="72.0" layoutY="185.0" prefHeight="457.0" prefWidth="455.0" promptText="Write here your content..." style="-fx-border-color: #849AC5; -fx-border-width: 2; -fx-wrap-text: true; -fx-vbar-policy: always;" />
+            <TextArea fx:id="taContent" layoutX="132.0" layoutY="185.0" prefHeight="457.0" prefWidth="395.0" promptText="Write here your content..." style="-fx-border-color: #849AC5; -fx-border-width: 2; -fx-wrap-text: true; -fx-vbar-policy: always;" />
             <HBox alignment="CENTER" layoutX="26.0" layoutY="651.0" prefHeight="82.0" prefWidth="547.0" style="-fx-spacing: 40; -fx-background-color: #849AC5; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;">
                <children>
                   <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onClick" style="-fx-background-color: #849AC5; -fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 2;">
@@ -66,6 +67,12 @@
                   </Button>
                </children>
             </HBox>
+            <ListView fx:id="lvFiles" layoutX="15.0" layoutY="307.0" prefHeight="318.0" prefWidth="107.0" style="-fx-background-color: #849AC5; -fx-border-color: white; -fx-border-width: 2;" />
+            <Label alignment="CENTER" layoutX="15.0" layoutY="252.0" prefHeight="40.0" prefWidth="107.0" style="-fx-border-color: white; -fx-border-width: 0 0 2 0;" text="Files" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="30.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

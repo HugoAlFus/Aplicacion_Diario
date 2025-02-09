@@ -116,7 +116,6 @@ public class DiaryEntry {
         sb.append(", content='").append(content).append('\'');
         sb.append(", createdAt=").append(createdAt);
         sb.append(", filePaths=").append(filePaths);
-        sb.append(", user=").append(user);
         sb.append('}');
         return sb.toString();
     }

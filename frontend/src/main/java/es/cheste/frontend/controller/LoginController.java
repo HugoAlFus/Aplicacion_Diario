@@ -37,7 +37,7 @@ public class LoginController {
 
         if(actionEvent.getSource() == btnLog){
 
-            if(tfUsername.getText() != null && pfPassword.getText() != null){
+            if(!tfUsername.getText().isEmpty() || !pfPassword.getText().isEmpty()){
                 logUser();
             }
         } else if(actionEvent.getSource() == btnForgotPassword){
@@ -50,12 +50,17 @@ public class LoginController {
 
         String json = new Gson().toJson(user);
         try {
-            LOGGER.info(userService.loginUser(json));
-            WindowManagement.openNewWindow("/es/cheste/frontend/app/diaryApp.fxml", "My Diary", (Stage) btnLog.getScene().getWindow(), user);
-        } catch (InterruptedException | IOException e) {
+            if (!userService.loginUser(json).contains("Incorrect")){
+                WindowManagement.openNewWindow("/es/cheste/frontend/app/diaryApp.fxml", "My Diary", (Stage) btnLog.getScene().getWindow(), user);
+            } else {
+                lbError.setText("Incorrect username or password");
+                pfPassword.setText(null);
+            }
 
+        } catch (InterruptedException | RuntimeException | IOException e) {
             lbError.setText(e.getMessage());
             pfPassword.setText(null);
+
         }
     }
 }

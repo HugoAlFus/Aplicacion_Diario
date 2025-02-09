@@ -8,6 +8,8 @@ import es.cheste.backend.exception.UserAlreadyExistsException;
 import es.cheste.backend.exception.UserNotFoundException;
 import es.cheste.backend.model.User;
 import es.cheste.backend.repository.UserRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -17,6 +19,7 @@ import java.time.LocalDate;
 @Service
 public class UserService {
 
+    private static final Logger LOGGER = LogManager.getLogger(UserService.class);
     @Autowired
     private UserRepository userRepository;
 
@@ -48,7 +51,11 @@ public class UserService {
 
         User user = userRepository.findByUsername(userLoginDTO.getUsername());
 
-        if (user == null || !passwordEncoder.matches(userLoginDTO.getPassword(), user.getPassword())) {
+        if (user == null) {
+            throw new UserNotFoundException("Incorrect username or password");
+        }
+
+        if (!passwordEncoder.matches(userLoginDTO.getPassword(), user.getPassword())) {
             throw new InvalidCredentialsException("Incorrect username or password");
         }
         return user;
@@ -65,7 +72,7 @@ public class UserService {
         if (passwordEncoder.matches(userUpdatePasswordDTO.getNewPassword(), user.getPassword())) {
             throw new InvalidCredentialsException("The new password is already in use");
         }
-            user.setPassword(passwordEncoder.encode(userUpdatePasswordDTO.getNewPassword()));
+        user.setPassword(passwordEncoder.encode(userUpdatePasswordDTO.getNewPassword()));
 
         return userRepository.save(user);
     }
