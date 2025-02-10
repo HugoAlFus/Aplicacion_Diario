@@ -1,6 +1,8 @@
 package es.cheste.frontend.service;
 
 import es.cheste.frontend.util.ErrorManagement;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URI;
@@ -12,6 +14,8 @@ import java.time.LocalDate;
 public class DiaryEntryService {
 
     private static final String BASE_URL = "http://localhost:8080/api/entries";
+    private static final Logger LOGGER = LogManager.getLogger(DiaryEntryService.class);
+
 
     public String createEntry(String jsonBody, Long userId) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
@@ -31,10 +35,13 @@ public class DiaryEntryService {
     public String updateEntry(String jsonBody, Long userId, Long entryId) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(BASE_URL + entryId + "?userId=" + userId))
+                .uri(URI.create(BASE_URL + "/" + entryId + "?userId=" + userId))
                 .header("Content-Type", "application/json")
                 .PUT(HttpRequest.BodyPublishers.ofString(jsonBody))
                 .build();
+
+        LOGGER.info("Sending PUT request to URL: {}", BASE_URL + "/"+ entryId + "?userId=" + userId);
+        LOGGER.info("Request body: {}", jsonBody);
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 

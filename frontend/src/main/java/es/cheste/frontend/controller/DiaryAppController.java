@@ -23,6 +23,8 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -58,6 +60,7 @@ public class DiaryAppController {
     private String username;
     private DiaryEntryDTO entryDTO;
     private List<String> listPaths = new ArrayList<>();
+    private File data;
 
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
@@ -84,8 +87,12 @@ public class DiaryAppController {
             }
         } else {
             try {
+                entryDTO.setContent(taContent.getText());
+                entryDTO.setTitle(tfTitle.getText());
+                entryDTO.setFilePaths(listPaths);
                 LOGGER.info(diaryEntryService.updateEntry(GsonUtil.getGson().toJson(entryDTO), userId, entryDTO.getId()));
             } catch (IOException | InterruptedException e) {
+                System.out.println(e.toString());
                 DialogUtil.showDialogError("Error", e.getMessage(), "Error updating");
                 LOGGER.error("Error updating DiaryEntry {}", e.getMessage());
             }
@@ -95,12 +102,18 @@ public class DiaryAppController {
 
     private void chooseFile() {
 
-
         File file = fileChooser.showOpenDialog(btnList.getScene().getWindow());
 
         if (file != null) {
-            listPaths.add(file.getAbsolutePath());
-            lvFiles.getItems().add(file.getName());
+            File tempFile = new File(data.getAbsolutePath(), file.getName());
+            try {
+
+                Files.copy(file.toPath(), tempFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            listPaths.add(tempFile.getAbsolutePath());
+            lvFiles.getItems().add(tempFile.getName());
         }
     }
 
@@ -117,13 +130,15 @@ public class DiaryAppController {
     }
 
     public void initializeContent(String username) {
-
+        data = new File("D:/MyDiary/Data/" + username + "/" + LocalDate.now());
         this.username = username;
+        LOGGER.info("Data created: " + data.mkdirs());
         setUserId();
         setEntryDTO();
         lbEntryDay.setText(setDate());
         initializePaths();
         initializeListView();
+
 
         if (entryDTO != null) {
             setTfTitle();

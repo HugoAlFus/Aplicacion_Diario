@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class DiaryEntryService {
@@ -41,19 +42,13 @@ public class DiaryEntryService {
         DiaryEntry entry = diaryEntryRepository.findById(entryId)
                 .orElseThrow(() -> new EntryNotFoundException("Entry not found"));
 
-        if (!entry.getUser().getId().equals(userId)) {
+        if (!Objects.equals(entry.getUser().getId(), userId)) {
             throw new PermissionDeniedException("You do not have permission to edit this entry");
         }
 
-        if (entryDTO.getTitle() != null) {
-            entry.setTitle(entryDTO.getTitle());
-        }
-        if (entryDTO.getContent() != null) {
-            entry.setContent(entryDTO.getContent());
-        }
-        if(entryDTO.getFilePaths() != null){
-            entry.setFilePaths(entryDTO.getFilePaths());
-        }
+        entry.setTitle(entryDTO.getTitle());
+        entry.setContent(entryDTO.getContent());
+        entry.setFilePaths(entryDTO.getFilePaths());
 
         return diaryEntryRepository.save(entry);
     }

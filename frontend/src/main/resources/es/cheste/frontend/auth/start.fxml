@@ -40,7 +40,7 @@
                   <Font name="Century" size="64.0" />
                </font>
             </Label>
-            <Button fx:id="btnExit" layoutX="421.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClick" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: white;">
+            <Button fx:id="btnExit" layoutX="434.0" layoutY="-1.0" mnemonicParsing="false" onAction="#onClick" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: white;">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0">
                      <image>

@@ -3,8 +3,9 @@ package es.cheste.frontend.controller;
 import es.cheste.frontend.dto.DiaryEntryDTO;
 import es.cheste.frontend.util.DialogUtil;
 import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseButton;
@@ -26,17 +27,17 @@ public class EntryDetailsController {
     private TextArea taContent;
     @javafx.fxml.FXML
     private Label lbEntryDay;
-    @javafx.fxml.FXML
-    private Button btnExit;
 
     private DiaryEntryDTO entryDTO;
+    @javafx.fxml.FXML
+    private Button btnExit;
 
     public void initializeContent(DiaryEntryDTO entry) {
 
         tfTitle.setText(entry.getTitle());
         lbEntryDay.setText(entry.getCreatedAt().toString());
         taContent.setText(entry.getContent());
-        lvFiles.getItems().addAll(entry.getFilePaths());
+        entry.getFilePaths().forEach(s -> lvFiles.getItems().add(new File(s).getName()));
 
         this.entryDTO = entry;
         initializeListView();
@@ -70,8 +71,9 @@ public class EntryDetailsController {
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
 
-        if(actionEvent.getSource() == btnExit){
+        if (actionEvent.getSource() == btnExit) {
             System.exit(0);
         }
+
     }
 }

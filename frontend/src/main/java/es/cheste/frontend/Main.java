@@ -11,18 +11,9 @@ import javafx.stage.StageStyle;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/es/cheste/frontend/auth/start.fxml"));
-        Parent root = loader.load();
-        primaryStage.setTitle("Start");
-        Scene scene = new Scene(root);
+    public void start(Stage primaryStage) {
 
-        String css = WindowManagement.class.getResource("/es/cheste/frontend/css/Style.css").toExternalForm();
-        scene.getStylesheets().add(css);
-
-        primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        WindowManagement.openNewWindow("/es/cheste/frontend/auth/start.fxml", "Start", primaryStage, null);
     }
 
     public static void main(String[] args) {
