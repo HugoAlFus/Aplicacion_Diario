@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
@@ -13,7 +14,6 @@
    <children>
       <Pane prefHeight="733.0" prefWidth="600.0" style="-fx-background-color: #8DA4CE;">
          <children>
-            <ListView fx:id="lvEntries" layoutX="89.0" layoutY="109.0" prefHeight="576.0" prefWidth="423.0" style="-fx-background-color: #849AC5; -fx-border-color: white; -fx-border-width: 2;" />
             <Label alignment="CENTER" layoutX="63.0" layoutY="6.0" prefHeight="80.0" prefWidth="476.0" style="-fx-border-color: white; -fx-border-width: 0 0 2 0;" text="Entries" textFill="WHITE">
                <font>
                   <Font name="Century" size="64.0" />
@@ -28,6 +28,8 @@
                   </ImageView>
                </graphic>
             </Button>
+            <DatePicker fx:id="dpEntries" layoutX="156.0" layoutY="124.0" prefHeight="43.0" prefWidth="290.0" promptText="Choose a day" />
+            <ListView fx:id="lvEntries" layoutX="155.0" layoutY="209.0" prefHeight="407.0" prefWidth="290.0" style="-fx-background-color: #849AC5; -fx-border-color: white; -fx-border-width: 2;" />
          </children>
       </Pane>
    </children>

@@ -35,7 +35,6 @@ public class ChangePassword {
 
     private final UserService userService = new UserService();
 
-
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
 

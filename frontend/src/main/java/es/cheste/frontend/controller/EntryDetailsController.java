@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseButton;
+import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -72,7 +73,7 @@ public class EntryDetailsController {
     public void onClick(ActionEvent actionEvent) {
 
         if (actionEvent.getSource() == btnExit) {
-            System.exit(0);
+            ((Stage) btnExit.getScene().getWindow()).close();
         }
 
     }

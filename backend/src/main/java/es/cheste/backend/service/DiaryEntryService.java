@@ -46,9 +46,21 @@ public class DiaryEntryService {
             throw new PermissionDeniedException("You do not have permission to edit this entry");
         }
 
-        entry.setTitle(entryDTO.getTitle());
-        entry.setContent(entryDTO.getContent());
-        entry.setFilePaths(entryDTO.getFilePaths());
+        if(!entryDTO.getTitle().isEmpty()){
+
+            entry.setTitle(entryDTO.getTitle());
+        }
+
+        if(!entryDTO.getContent().isEmpty()){
+
+            entry.setContent(entryDTO.getContent());
+        }
+
+        if(!entryDTO.getFilePaths().isEmpty()){
+
+            entry.setFilePaths(entryDTO.getFilePaths());
+        }
+
 
         return diaryEntryRepository.save(entry);
     }

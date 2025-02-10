@@ -80,7 +80,9 @@ public class DiaryAppController {
             entryDTO = new DiaryEntryDTO(LocalDate.now(), taContent.getText(), tfTitle.getText(), listPaths);
 
             try {
-                LOGGER.info(diaryEntryService.createEntry(GsonUtil.getGson().toJson(entryDTO), userId));
+                DiaryEntryDTO createdEntry = GsonUtil.getGson().fromJson(
+                        diaryEntryService.createEntry(GsonUtil.getGson().toJson(entryDTO), userId), DiaryEntryDTO.class);
+                entryDTO.setId(createdEntry.getId());
             } catch (IOException | InterruptedException e) {
                 DialogUtil.showDialogError("Error", e.getMessage(), "Error saving");
                 LOGGER.error("Error creating DiaryEntry {}", e.getMessage());
@@ -92,7 +94,6 @@ public class DiaryAppController {
                 entryDTO.setFilePaths(listPaths);
                 LOGGER.info(diaryEntryService.updateEntry(GsonUtil.getGson().toJson(entryDTO), userId, entryDTO.getId()));
             } catch (IOException | InterruptedException e) {
-                System.out.println(e.toString());
                 DialogUtil.showDialogError("Error", e.getMessage(), "Error updating");
                 LOGGER.error("Error updating DiaryEntry {}", e.getMessage());
             }
@@ -110,7 +111,9 @@ public class DiaryAppController {
 
                 Files.copy(file.toPath(), tempFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                DialogUtil.showDialogError("Error", "An unexpected error occurred when using the file", "File error");
+                LOGGER.error("Error copy file {} ", e.getMessage());
+
             }
             listPaths.add(tempFile.getAbsolutePath());
             lvFiles.getItems().add(tempFile.getName());
@@ -132,7 +135,7 @@ public class DiaryAppController {
     public void initializeContent(String username) {
         data = new File("D:/MyDiary/Data/" + username + "/" + LocalDate.now());
         this.username = username;
-        LOGGER.info("Data created: " + data.mkdirs());
+        LOGGER.info("Data created {}", data.mkdirs());
         setUserId();
         setEntryDTO();
         lbEntryDay.setText(setDate());

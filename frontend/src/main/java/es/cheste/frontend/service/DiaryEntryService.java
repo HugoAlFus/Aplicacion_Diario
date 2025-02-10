@@ -53,7 +53,7 @@ public class DiaryEntryService {
     public String deleteEntry(Long userId, Long entryId) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(BASE_URL + entryId + "?userId=" + userId))
+                .uri(URI.create(BASE_URL + "/" + entryId + "?userId=" + userId))
                 .header("Content-Type", "application/json")
                 .DELETE()
                 .build();
