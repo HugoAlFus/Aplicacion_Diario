@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="733.0" prefWidth="600.0" style="-fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.cheste.frontend.controller.ListEntriesController">
    <children>
-      <Pane prefHeight="733.0" prefWidth="600.0" style="-fx-background-color: #8DA4CE; -fx-background-radius: 30;">
+      <Pane prefHeight="733.0" prefWidth="600.0" style="-fx-background-color: #8DA4CE;">
          <children>
             <ListView fx:id="lvEntries" layoutX="89.0" layoutY="109.0" prefHeight="576.0" prefWidth="423.0" style="-fx-background-color: #849AC5; -fx-border-color: white; -fx-border-width: 2;" />
             <Label alignment="CENTER" layoutX="63.0" layoutY="6.0" prefHeight="80.0" prefWidth="476.0" style="-fx-border-color: white; -fx-border-width: 0 0 2 0;" text="Entries" textFill="WHITE">
@@ -17,6 +19,15 @@
                   <Font name="Century" size="64.0" />
                </font>
             </Label>
+            <Button fx:id="btnExit" layoutX="534.0" mnemonicParsing="false" onAction="#onClick" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: #8DA4CE;">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@../../../../static/img_exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </Pane>
    </children>

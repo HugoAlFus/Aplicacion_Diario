@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="733.0" prefWidth="500.0" style="-fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.cheste.frontend.controller.LoginController">
    <children>
-      <Pane prefHeight="733.0" prefWidth="500.0" style="-fx-background-color: #8DA4CE; -fx-border-radius: 30; -fx-background-radius: 30;">
+      <Pane prefHeight="733.0" prefWidth="500.0" style="-fx-background-color: #8DA4CE;">
          <children>
             <ImageView fitHeight="175.0" fitWidth="174.0" layoutX="155.0" layoutY="140.0">
                <image>
@@ -71,6 +71,15 @@
                   <Font size="20.0" />
                </font>
             </Label>
+            <Button fx:id="btnExit" layoutX="432.0" layoutY="-1.0" mnemonicParsing="false" onAction="#onClick" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: #8DA4CE;">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@../../../../static/img_exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </Pane>
    </children>

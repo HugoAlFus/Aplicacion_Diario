@@ -3,6 +3,7 @@ package es.cheste.frontend.controller;
 import com.google.gson.Gson;
 import es.cheste.frontend.dto.UserRegisterDTO;
 import es.cheste.frontend.service.UserService;
+import es.cheste.frontend.util.DialogUtil;
 import es.cheste.frontend.util.WindowManagement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -33,6 +34,8 @@ public class RegisterController {
     private Label lbError;
 
     private final UserService userService = new UserService();
+    @FXML
+    private Button btnExit;
 
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
@@ -51,11 +54,12 @@ public class RegisterController {
                     WindowManagement.openNewWindow("/es/cheste/frontend/app/diaryApp.fxml", "My Diary", (Stage) tfEmail.getScene().getWindow(), user);
 
                 } catch (InterruptedException | IOException e) {
+                    DialogUtil.showDialogError("Error", e.getMessage(), "Register error");
                     lbError.setText(e.getMessage());
                     tfEmail.setText(null);
                     pfPassword.setText(null);
                 }
             }
-        }
+        } else System.exit(0);
     }
 }

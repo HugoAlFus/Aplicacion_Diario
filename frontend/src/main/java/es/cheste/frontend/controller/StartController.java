@@ -10,6 +10,8 @@ public class StartController {
     private Button btnLogin;
     @javafx.fxml.FXML
     private Button btnCreateAccount;
+    @javafx.fxml.FXML
+    private Button btnExit;
 
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
@@ -20,6 +22,7 @@ public class StartController {
 
         } else if(actionEvent.getSource() == btnCreateAccount) {
             WindowManagement.openNewWindow("/es/cheste/frontend/auth/register.fxml", "Register",(Stage) btnLogin.getScene().getWindow(), null);
-        }
+        } else
+            System.exit(0);
     }
 }

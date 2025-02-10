@@ -3,6 +3,7 @@ package es.cheste.frontend.controller;
 import com.google.gson.Gson;
 import es.cheste.frontend.dto.UserLoginDTO;
 import es.cheste.frontend.service.UserService;
+import es.cheste.frontend.util.DialogUtil;
 import es.cheste.frontend.util.WindowManagement;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -31,6 +32,8 @@ public class LoginController {
     private UserService userService = new UserService();
     @javafx.fxml.FXML
     private Label lbError;
+    @javafx.fxml.FXML
+    private Button btnExit;
 
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
@@ -42,7 +45,7 @@ public class LoginController {
             }
         } else if(actionEvent.getSource() == btnForgotPassword){
             WindowManagement.openNewWindow("/es/cheste/frontend/auth/ChangePassword.fxml", "Change Password", (Stage) btnLog.getScene().getWindow(), null);
-        }
+        } else System.exit(0);
     }
 
     private void logUser() {
@@ -53,11 +56,12 @@ public class LoginController {
             if (!userService.loginUser(json).contains("Incorrect")){
                 WindowManagement.openNewWindow("/es/cheste/frontend/app/diaryApp.fxml", "My Diary", (Stage) btnLog.getScene().getWindow(), user);
             } else {
+                DialogUtil.showDialogError("Error", "Incorrect username or password", "Error login username");
                 lbError.setText("Incorrect username or password");
                 pfPassword.setText(null);
             }
-
-        } catch (InterruptedException | RuntimeException | IOException e) {
+        } catch (InterruptedException | IOException e) {
+            DialogUtil.showDialogError("Error", "Incorrect username or password", "Error login username");
             lbError.setText(e.getMessage());
             pfPassword.setText(null);
 

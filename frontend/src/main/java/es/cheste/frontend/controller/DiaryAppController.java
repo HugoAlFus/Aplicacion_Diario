@@ -4,6 +4,7 @@ import com.google.gson.reflect.TypeToken;
 import es.cheste.frontend.dto.DiaryEntryDTO;
 import es.cheste.frontend.service.DiaryEntryService;
 import es.cheste.frontend.service.UserService;
+import es.cheste.frontend.util.DialogUtil;
 import es.cheste.frontend.util.GsonUtil;
 import es.cheste.frontend.util.WindowManagement;
 import javafx.event.ActionEvent;
@@ -34,6 +35,7 @@ public class DiaryAppController {
     private static final Logger LOGGER = LogManager.getLogger(DiaryAppController.class);
     private final UserService userService = new UserService();
     private final DiaryEntryService diaryEntryService = new DiaryEntryService();
+    private final FileChooser fileChooser = new FileChooser();
 
     @javafx.fxml.FXML
     private TextField tfTitle;
@@ -47,29 +49,26 @@ public class DiaryAppController {
     private Button btnList;
     @javafx.fxml.FXML
     private Button btnAddFile;
+    @javafx.fxml.FXML
+    private ListView<String> lvFiles;
+    @javafx.fxml.FXML
+    private Button btnExit;
 
-    private FileChooser fileChooser = new FileChooser();
     private Long userId;
     private String username;
     private DiaryEntryDTO entryDTO;
     private List<String> listPaths = new ArrayList<>();
-    @javafx.fxml.FXML
-    private ListView<String> lvFiles;
 
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
 
         if (actionEvent.getSource() == btnSave) {
             saveData();
-        }
-
-        if (actionEvent.getSource() == btnList) {
+        } else if (actionEvent.getSource() == btnList) {
             listEntries();
-        }
-
-        if(actionEvent.getSource() == btnAddFile){
+        } else if (actionEvent.getSource() == btnAddFile) {
             chooseFile();
-        }
+        } else System.exit(0);
     }
 
     private void saveData() {
@@ -80,12 +79,14 @@ public class DiaryAppController {
             try {
                 LOGGER.info(diaryEntryService.createEntry(GsonUtil.getGson().toJson(entryDTO), userId));
             } catch (IOException | InterruptedException e) {
+                DialogUtil.showDialogError("Error", e.getMessage(), "Error saving");
                 LOGGER.error("Error creating DiaryEntry {}", e.getMessage());
             }
         } else {
             try {
                 LOGGER.info(diaryEntryService.updateEntry(GsonUtil.getGson().toJson(entryDTO), userId, entryDTO.getId()));
             } catch (IOException | InterruptedException e) {
+                DialogUtil.showDialogError("Error", e.getMessage(), "Error updating");
                 LOGGER.error("Error updating DiaryEntry {}", e.getMessage());
             }
         }
@@ -97,22 +98,21 @@ public class DiaryAppController {
 
         File file = fileChooser.showOpenDialog(btnList.getScene().getWindow());
 
-        if(file != null){
+        if (file != null) {
             listPaths.add(file.getAbsolutePath());
             lvFiles.getItems().add(file.getName());
         }
     }
 
-    private void listEntries(){
+    private void listEntries() {
         try {
             Type lisType = new TypeToken<List<DiaryEntryDTO>>() {
             }.getType();
             List<DiaryEntryDTO> list = GsonUtil.getGson().fromJson(diaryEntryService.getEntriesByUserId(userId), lisType);
             WindowManagement.openNewWindow("/es/cheste/frontend/app/ListEntriesController.fxml", "Entries", (Stage) btnSave.getScene().getWindow(), list);
         } catch (IOException | InterruptedException e) {
+            DialogUtil.showDialogError("Error", e.getMessage(), "List entry error");
             LOGGER.error("Error in the listEntries {}", e.getMessage());
-            System.err.println("An error ocurred");
-            System.exit(0);
         }
     }
 
@@ -132,7 +132,7 @@ public class DiaryAppController {
         }
     }
 
-    private void initializePaths(){
+    private void initializePaths() {
         fileChooser.setTitle("Select a file");
 
         fileChooser.getExtensionFilters().addAll(
@@ -162,6 +162,7 @@ public class DiaryAppController {
                 }
             }
         } catch (IOException e) {
+            DialogUtil.showDialogError("Error", e.getMessage(), "Error opening file");
             LOGGER.error("Error opening file {}", e.getMessage());
         }
     }
@@ -171,8 +172,8 @@ public class DiaryAppController {
         try {
             userId = Long.valueOf(userService.getUserByUsername(username));
         } catch (IOException | InterruptedException e) {
+            DialogUtil.showDialogError("Error", e.getMessage(), "Error searching the user");
             LOGGER.error("username not found {}", e.getMessage());
-            System.err.println("An error ocurred");
             System.exit(0);
         }
     }
@@ -182,7 +183,7 @@ public class DiaryAppController {
         try {
             entryDTO = GsonUtil.getGson().fromJson(diaryEntryService.findEntryByIdAndDate(userId, LocalDate.now()), DiaryEntryDTO.class);
         } catch (IOException | InterruptedException e) {
-            LOGGER.error("Diary entry not found {}", e.getMessage());
+            LOGGER.info("Diary entry not found {}", e.getMessage());
             entryDTO = null;
         }
     }

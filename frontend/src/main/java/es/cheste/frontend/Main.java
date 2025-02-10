@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -19,6 +20,7 @@ public class Main extends Application {
         String css = WindowManagement.class.getResource("/es/cheste/frontend/css/Style.css").toExternalForm();
         scene.getStylesheets().add(css);
 
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

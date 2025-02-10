@@ -1,6 +1,8 @@
 package es.cheste.frontend.controller;
 
 import es.cheste.frontend.dto.DiaryEntryDTO;
+import es.cheste.frontend.util.DialogUtil;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
@@ -24,6 +26,8 @@ public class EntryDetailsController {
     private TextArea taContent;
     @javafx.fxml.FXML
     private Label lbEntryDay;
+    @javafx.fxml.FXML
+    private Button btnExit;
 
     private DiaryEntryDTO entryDTO;
 
@@ -58,7 +62,16 @@ public class EntryDetailsController {
                 }
             }
         } catch (IOException e) {
+            DialogUtil.showDialogError("Error", e.getMessage(), "Error opening file");
             LOGGER.error("Error opening file {}", e.getMessage());
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void onClick(ActionEvent actionEvent) {
+
+        if(actionEvent.getSource() == btnExit){
+            System.exit(0);
         }
     }
 }

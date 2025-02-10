@@ -2,6 +2,8 @@ package es.cheste.frontend.controller;
 
 import es.cheste.frontend.dto.DiaryEntryDTO;
 import es.cheste.frontend.util.WindowManagement;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 
 import java.util.List;
@@ -11,13 +13,13 @@ public class ListEntriesController {
     private ListView<String> lvEntries;
 
     private List<DiaryEntryDTO> listEntry;
+    @javafx.fxml.FXML
+    private Button btnExit;
 
     public void initializedContent(List<DiaryEntryDTO> listEntry) {
         this.listEntry = listEntry;
         loadEntries();
     }
-
-
 
     private void loadEntries() {
 
@@ -41,4 +43,11 @@ public class ListEntriesController {
 
     }
 
+    @javafx.fxml.FXML
+    public void onClick(ActionEvent actionEvent) {
+
+        if(actionEvent.getSource() == btnExit){
+            System.exit(0);
+        }
+    }
 }

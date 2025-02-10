@@ -11,3 +11,16 @@
 2025-02-09 09:07:54,155 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: The username is already in use
 2025-02-09 09:13:14,633 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: User not found
 2025-02-09 09:13:34,103 INFO e.c.f.c.ChangePassword [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-10 09:23:19,493 INFO e.c.f.c.RegisterController [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-10 09:23:19,607 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 2 and date: 2025-02-10
+2025-02-10 09:23:19,607 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 2 and date: 2025-02-10
+2025-02-10 09:40:00,401 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 2 and date: 2025-02-10
+2025-02-10 09:40:00,402 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 2 and date: 2025-02-10
+2025-02-10 09:49:06,310 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 2 and date: 2025-02-10
+2025-02-10 09:49:06,312 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 2 and date: 2025-02-10
+2025-02-10 09:50:05,925 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 2 and date: 2025-02-10
+2025-02-10 09:50:05,927 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 2 and date: 2025-02-10
+2025-02-10 09:51:44,122 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 2 and date: 2025-02-10
+2025-02-10 09:51:44,123 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 2 and date: 2025-02-10
+2025-02-10 09:52:17,437 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: User not found
+2025-02-10 09:52:22,207 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] username not found User not found

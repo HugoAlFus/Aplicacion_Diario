@@ -3,6 +3,7 @@ package es.cheste.frontend.controller;
 import com.google.gson.Gson;
 import es.cheste.frontend.dto.UserUpdatePasswordDTO;
 import es.cheste.frontend.service.UserService;
+import es.cheste.frontend.util.DialogUtil;
 import es.cheste.frontend.util.WindowManagement;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -29,8 +30,11 @@ public class ChangePassword {
     private TextField tfEmail;
     @javafx.fxml.FXML
     private Label lbError;
+    @javafx.fxml.FXML
+    private Button btnExit;
 
     private final UserService userService = new UserService();
+
 
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
@@ -48,17 +52,19 @@ public class ChangePassword {
                         LOGGER.info(userService.updateUser(json));
                         WindowManagement.openNewWindow("/es/cheste/frontend/auth/login.fxml", "Login", (Stage) btnUpdatePassword.getScene().getWindow(), null);
                     } catch (InterruptedException | IOException e) {
+                        DialogUtil.showDialogError("Error", e.getMessage(), "Email error");
                         lbError.setText(e.getMessage());
                         pfNewPassword.setText(null);
                         pfCurrentPassword.setText(null);
 
                     }
                 } else {
+                    DialogUtil.showDialogError("Error", "The password must be the same", "Password error");
                     lbError.setText("The password must be the same");
                     pfNewPassword.setText(null);
                     pfCurrentPassword.setText(null);
                 }
             }
-        }
+        } else System.exit(0);
     }
 }
