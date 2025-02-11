@@ -63,7 +63,7 @@ public class ListEntriesController {
     }
 
     private void showEntryDetails(DiaryEntryDTO entryDTO) {
-        WindowManagement.openNewWindow("/es/cheste/frontend/app/EntryDetails.fxml", "Entry Details", null, entryDTO);
+        WindowManagement.openNewWindow("/es/cheste/frontend/app/EntryDetails.fxml", "Entry Details", ((Stage) btnExit.getScene().getWindow()) , entryDTO);
     }
 
     @javafx.fxml.FXML

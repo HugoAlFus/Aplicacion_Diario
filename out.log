@@ -1,331 +1,75 @@
-2025-02-10 14:10:01,089 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: false
-2025-02-10 14:10:03,386 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:10:03,386 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:10:03,430 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 14:12:30,735 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: false
-2025-02-10 14:12:33,025 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:33,025 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:33,080 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,037 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:34,037 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,050 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,214 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:34,214 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,224 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,414 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:34,414 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,424 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,621 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:34,622 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,632 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,789 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:34,789 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,799 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,941 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:34,942 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:34,951 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:51,601 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: false
-2025-02-10 14:12:57,968 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:57,968 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:57,983 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:58,373 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:58,373 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:58,387 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:58,541 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:58,541 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:58,553 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:58,717 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:58,717 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:58,726 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:58,902 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:58,902 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:58,911 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:59,093 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:59,093 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:59,104 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:59,277 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:59,277 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:59,286 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:59,469 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:59,469 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:59,478 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:59,653 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:59,653 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:59,664 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:59,853 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:12:59,853 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:12:59,862 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:13:00,189 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:13:00,190 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:13:00,198 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:13:00,710 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:13:00,710 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:13:00,722 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:13:00,861 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:13:00,861 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:13:00,870 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:13:01,021 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:13:01,021 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:13:01,030 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:13:01,181 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:13:01,181 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:13:01,190 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"Mi primera entrdada cambiada dadsdadad","content":"Mi pimer texto cambiado","createdAt":"2025-02-10","filePaths":["ruta1","ruta2"]}
-2025-02-10 14:14:48,928 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: false
-2025-02-10 14:14:48,968 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 1 and date: 2025-02-10
-2025-02-10 14:14:48,969 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 1 and date: 2025-02-10
-2025-02-10 14:14:54,068 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa","content":"dgdfdf","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:14:54,588 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entriesnull?userId=1
-2025-02-10 14:14:54,588 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"dsasaffa","content":"dgdfdf","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:14:54,642 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 14:14:56,713 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 14:14:57,500 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entriesnull?userId=1
-2025-02-10 14:14:57,500 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"dsasaffa","content":"dgdfdf","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:14:57,529 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 14:14:58,570 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 14:15:15,357 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: false
-2025-02-10 14:15:18,918 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries1?userId=1
-2025-02-10 14:15:18,918 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa","content":"dgdfdf","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:15:18,935 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa","content":"dgdfdf","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:24,129 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: false
-2025-02-10 14:17:27,445 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:27,445 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:27,460 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:27,939 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:27,939 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:27,948 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:28,291 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:28,291 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:28,302 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:28,563 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:28,563 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:28,571 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:28,828 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:28,828 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:28,834 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,083 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:29,084 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,091 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,291 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:29,292 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,300 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,451 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:29,451 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,459 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,611 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:29,611 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,620 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,772 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:29,772 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,780 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,923 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:29,923 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:29,931 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:30,355 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:30,355 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:30,363 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:30,620 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:30,620 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:30,628 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:30,755 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:30,755 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:30,765 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:30,939 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:30,939 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:30,948 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:31,124 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:31,124 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:31,132 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:31,283 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:31,283 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:31,291 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:31,459 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:31,459 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:31,465 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:32,115 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:32,115 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:32,123 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:32,275 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:32,275 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:32,282 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 14:17:46,222 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: false
-2025-02-10 14:17:59,669 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:17:59,669 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf"]}
-2025-02-10 14:17:59,684 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf"]}
-2025-02-10 14:20:05,585 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: false
-2025-02-10 14:20:20,140 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:20:20,140 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 14:20:20,204 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 14:20:20,529 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:20:20,529 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 14:20:20,539 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 14:20:20,770 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:20:20,770 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 14:20:20,780 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 14:20:20,970 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:20:20,970 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 14:20:20,979 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 14:20:21,146 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:20:21,146 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 14:20:21,157 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 14:20:21,314 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=1
-2025-02-10 14:20:21,314 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 14:20:21,322 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"dsasaffa2432432","content":"dgdfdf4324324324324safsafsfafsasfafsa","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\T2.Actividad1.pdf","D:\\MyDiary\\Data\\Admin\\2025-02-10\\README.txt"]}
-2025-02-10 16:39:40,209 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: true
-2025-02-10 16:39:41,199 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 6 and date: 2025-02-10
-2025-02-10 16:39:41,199 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 6 and date: 2025-02-10
-2025-02-10 16:39:47,427 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:39:48,052 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=6
-2025-02-10 16:39:48,052 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:39:48,091 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:39:49,298 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:39:50,110 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=6
-2025-02-10 16:39:50,110 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:39:50,117 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:39:51,303 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:40:04,319 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=6
-2025-02-10 16:40:04,319 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:40:04,325 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:40:06,210 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:40:06,917 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=6
-2025-02-10 16:40:06,917 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:40:06,923 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:40:07,684 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:41:42,866 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: false
-2025-02-10 16:41:54,060 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=6
-2025-02-10 16:41:54,060 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\37e354d3-5b09-49e6-9ae1-8cc1fa6cc1be.pdf"]}
-2025-02-10 16:41:54,090 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\37e354d3-5b09-49e6-9ae1-8cc1fa6cc1be.pdf"]}
-2025-02-10 16:41:54,899 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=6
-2025-02-10 16:41:54,899 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\37e354d3-5b09-49e6-9ae1-8cc1fa6cc1be.pdf"]}
-2025-02-10 16:41:54,907 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\37e354d3-5b09-49e6-9ae1-8cc1fa6cc1be.pdf"]}
-2025-02-10 16:41:55,322 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=6
-2025-02-10 16:41:55,322 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\37e354d3-5b09-49e6-9ae1-8cc1fa6cc1be.pdf"]}
-2025-02-10 16:41:55,330 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\37e354d3-5b09-49e6-9ae1-8cc1fa6cc1be.pdf"]}
-2025-02-10 16:41:55,512 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=6
-2025-02-10 16:41:55,512 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\37e354d3-5b09-49e6-9ae1-8cc1fa6cc1be.pdf"]}
-2025-02-10 16:41:55,520 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\37e354d3-5b09-49e6-9ae1-8cc1fa6cc1be.pdf"]}
-2025-02-10 16:41:55,693 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/1?userId=6
-2025-02-10 16:41:55,693 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":1,"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\37e354d3-5b09-49e6-9ae1-8cc1fa6cc1be.pdf"]}
-2025-02-10 16:41:55,701 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"ffggd","content":"fgdgdgdfgdfgfdgd","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-10\\37e354d3-5b09-49e6-9ae1-8cc1fa6cc1be.pdf"]}
-2025-02-10 16:43:52,276 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: The username is already in use
-2025-02-10 16:43:58,018 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: The username is already in use
-2025-02-10 16:44:03,287 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: The username is already in use
-2025-02-10 16:44:07,520 INFO e.c.f.c.RegisterController [JavaFX Application Thread] {"username":"4","email":"4"}
-2025-02-10 16:44:07,547 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: true
-2025-02-10 16:44:07,580 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 11 and date: 2025-02-10
-2025-02-10 16:44:07,580 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 11 and date: 2025-02-10
-2025-02-10 16:44:11,934 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"fdgfdgdf","content":"gfdgafadgafgfagda","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:44:12,717 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=11
-2025-02-10 16:44:12,717 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"fdgfdgdf","content":"gfdgafadgafgfagda","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:44:12,753 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:44:15,043 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:44:16,733 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=11
-2025-02-10 16:44:16,733 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"fdgfdgdf","content":"gfdgafadgafgfagda","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:44:16,738 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:44:17,925 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:44:18,622 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=11
-2025-02-10 16:44:18,622 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"fdgfdgdf","content":"gfdgafadgafgfagda","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:44:18,629 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:44:19,473 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:44:20,353 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=11
-2025-02-10 16:44:20,353 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"fdgfdgdf","content":"gfdgafadgafgfagda","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:44:20,359 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:44:21,181 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:44:22,260 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=11
-2025-02-10 16:44:22,260 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"fdgfdgdf","content":"gfdgafadgafgfagda","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:44:22,266 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:44:23,465 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:44:35,791 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=11
-2025-02-10 16:44:35,791 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"fdgfdgdf","content":"gfdgafadgafgfagda","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\4\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:44:35,797 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:44:36,687 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:47:03,917 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=11
-2025-02-10 16:47:03,917 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"fdgfdgdf","content":"gfdgafadgafgfagda","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\4\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:47:03,925 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:47:05,702 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:47:48,745 INFO e.c.f.c.RegisterController [JavaFX Application Thread] {"username":"5","email":"5"}
-2025-02-10 16:47:48,777 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: true
-2025-02-10 16:47:48,814 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 12 and date: 2025-02-10
-2025-02-10 16:47:48,815 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 12 and date: 2025-02-10
-2025-02-10 16:47:57,137 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":3,"title":"657575","content":"67jghjythgjtyjty","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\5\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:47:59,798 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=12
-2025-02-10 16:47:59,798 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"657575","content":"67jghjythgjtyjty","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\5\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:47:59,834 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:48:02,630 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:48:27,689 INFO e.c.f.c.RegisterController [JavaFX Application Thread] {"username":"6","email":"6"}
-2025-02-10 16:48:27,716 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: true
-2025-02-10 16:48:27,737 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 13 and date: 2025-02-10
-2025-02-10 16:48:27,737 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 13 and date: 2025-02-10
-2025-02-10 16:48:31,971 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":4,"title":"tfdgfd","content":"dfgdgdfg","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:48:32,769 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=13
-2025-02-10 16:48:32,769 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"tfdgfd","content":"dfgdgdfg","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:48:32,774 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:48:38,070 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:48:39,555 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=13
-2025-02-10 16:48:39,555 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"tfdgfd","content":"dfgdgdfg","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:48:39,561 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:48:40,937 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:51:35,574 INFO e.c.f.c.RegisterController [JavaFX Application Thread] {"username":"7","email":"7"}
-2025-02-10 16:51:35,600 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: true
-2025-02-10 16:51:35,637 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 14 and date: 2025-02-10
-2025-02-10 16:51:35,637 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 14 and date: 2025-02-10
-2025-02-10 16:51:38,520 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":5,"title":"fesfsfse","content":"fsfdfsfds","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:51:39,928 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/null?userId=14
-2025-02-10 16:51:39,928 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"title":"fesfsfse","content":"fsfdfsfds","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:51:39,964 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
-2025-02-10 16:51:53,968 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
-2025-02-10 16:56:23,913 INFO e.c.f.c.RegisterController [JavaFX Application Thread] {"username":"8","email":"8"}
-2025-02-10 16:56:23,940 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: true
-2025-02-10 16:56:23,978 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 15 and date: 2025-02-10
-2025-02-10 16:56:23,978 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 15 and date: 2025-02-10
-2025-02-10 16:56:29,116 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/6?userId=15
-2025-02-10 16:56:29,117 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:56:29,128 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:56:29,518 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/6?userId=15
-2025-02-10 16:56:29,518 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:56:29,525 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:56:29,668 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/6?userId=15
-2025-02-10 16:56:29,668 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:56:29,676 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":[]}
-2025-02-10 16:56:35,186 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/6?userId=15
-2025-02-10 16:56:35,186 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:35,203 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:35,359 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/6?userId=15
-2025-02-10 16:56:35,360 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:35,368 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:35,528 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/6?userId=15
-2025-02-10 16:56:35,528 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:35,537 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:35,704 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/6?userId=15
-2025-02-10 16:56:35,704 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:35,712 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:35,868 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/6?userId=15
-2025-02-10 16:56:35,868 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:35,877 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:36,050 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/6?userId=15
-2025-02-10 16:56:36,050 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:36,058 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:36,220 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/6?userId=15
-2025-02-10 16:56:36,220 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:36,227 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:36,395 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/6?userId=15
-2025-02-10 16:56:36,395 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:56:36,402 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"dfggdgfdg","content":"fdhsdfghsgdgsgfdsg","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\8\\2025-02-10\\24MP59G_27MP59G_ENG.pdf"]}
-2025-02-10 16:57:01,381 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: true
-2025-02-10 16:57:01,402 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 8 and date: 2025-02-10
-2025-02-10 16:57:01,403 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 8 and date: 2025-02-10
-2025-02-10 17:05:39,795 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created: false
-2025-02-10 17:05:49,587 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/7?userId=8
-2025-02-10 17:05:49,587 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":7,"title":"dfsfdsf","content":"sfdsfs","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\1\\2025-02-10\\README.txt"]}
-2025-02-10 17:05:49,596 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":7,"title":"dfsfdsf","content":"sfdsfs","createdAt":"2025-02-10","filePaths":["D:\\MyDiary\\Data\\1\\2025-02-10\\README.txt"]}
-2025-02-11 09:29:04,772 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created true
-2025-02-11 09:29:04,821 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 1 and date: 2025-02-11
-2025-02-11 09:29:04,821 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 1 and date: 2025-02-11
-2025-02-11 09:29:17,139 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/2?userId=1
-2025-02-11 09:29:17,139 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":2,"title":"feFDSGDSGDAS","content":"GADGdsgFads","createdAt":"2025-02-11","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-11\\readme_de.txt"]}
-2025-02-11 09:29:17,167 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"feFDSGDSGDAS","content":"GADGdsgFads","createdAt":"2025-02-11","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-11\\readme_de.txt"]}
-2025-02-11 09:29:17,475 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/2?userId=1
-2025-02-11 09:29:17,475 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":2,"title":"feFDSGDSGDAS","content":"GADGdsgFads","createdAt":"2025-02-11","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-11\\readme_de.txt"]}
-2025-02-11 09:29:17,486 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"feFDSGDSGDAS","content":"GADGdsgFads","createdAt":"2025-02-11","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-11\\readme_de.txt"]}
-2025-02-11 09:29:17,690 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Sending PUT request to URL: http://localhost:8080/api/entries/2?userId=1
-2025-02-11 09:29:17,690 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] Request body: {"id":2,"title":"feFDSGDSGDAS","content":"GADGdsgFads","createdAt":"2025-02-11","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-11\\readme_de.txt"]}
-2025-02-11 09:29:17,731 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"feFDSGDSGDAS","content":"GADGdsgFads","createdAt":"2025-02-11","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-11\\readme_de.txt"]}
+2025-02-11 18:02:59,868 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-11 18:03:02,221 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:03:02,263 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"fsfdsfdsfs","content":"dsasfdsfgdsgffdgfdgdg","createdAt":"2025-02-11","filePaths":[],"userId":null}
+2025-02-11 18:03:02,388 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:03:02,399 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"fsfdsfdsfs","content":"dsasfdsfgdsgffdgfdgdg","createdAt":"2025-02-11","filePaths":[],"userId":null}
+2025-02-11 18:03:02,554 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:03:02,564 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"fsfdsfdsfs","content":"dsasfdsfgdsgffdgfdgdg","createdAt":"2025-02-11","filePaths":[],"userId":null}
+2025-02-11 18:03:06,320 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] 1
+2025-02-11 18:03:06,322 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] UserId deleteEntry: null
+2025-02-11 18:03:06,359 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-11 18:03:06,359 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Error deleting entry: 
+2025-02-11 18:04:16,365 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-11 18:04:18,858 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:04:18,895 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"fsfdsfdsfs","content":"dsasfdsfgdsgffdgfdgdgasddasdasd","createdAt":"2025-02-11","filePaths":[],"userId":null}
+2025-02-11 18:04:19,019 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:04:19,030 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"fsfdsfdsfs","content":"dsasfdsfgdsgffdgfdgdgasddasdasd","createdAt":"2025-02-11","filePaths":[],"userId":null}
+2025-02-11 18:04:19,183 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:04:19,199 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":1,"title":"fsfdsfdsfs","content":"dsasfdsfgdsgffdgfdgdgasddasdasd","createdAt":"2025-02-11","filePaths":[],"userId":null}
+2025-02-11 18:04:24,240 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] 1
+2025-02-11 18:04:24,242 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] UserId deleteEntry: null
+2025-02-11 18:04:24,279 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-11 18:04:24,279 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Error deleting entry: 
+2025-02-11 18:14:34,714 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-11 18:14:34,751 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 1 and date: 2025-02-11
+2025-02-11 18:14:34,751 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 1 and date: 2025-02-11
+2025-02-11 18:14:37,982 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:14:37,995 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"dsadsa","content":"dsadsadsada","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:14:38,148 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:14:38,159 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"dsadsa","content":"dsadsadsada","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:14:38,311 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:14:38,321 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"dsadsa","content":"dsadsadsada","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:14:38,455 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:14:38,466 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"dsadsa","content":"dsadsadsada","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:14:41,239 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] 2
+2025-02-11 18:14:41,241 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] UserId deleteEntry: null
+2025-02-11 18:14:41,275 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-11 18:14:41,276 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Error deleting entry: 
+2025-02-11 18:19:50,958 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-11 18:19:52,270 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:19:52,298 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"dsadsa","content":"dsadsadsada","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:19:52,432 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:19:52,442 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"dsadsa","content":"dsadsadsada","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:19:52,567 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:19:52,577 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"dsadsa","content":"dsadsadsada","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:23:08,675 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-11 18:23:10,180 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:23:10,217 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"dsadsa","content":"dsadsadsadadsafasdfdaf","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:23:10,322 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:23:10,333 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"dsadsa","content":"dsadsadsadadsafasdfdaf","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:23:10,483 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:23:10,493 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":2,"title":"dsadsa","content":"dsadsadsadadsafasdfdaf","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:23:12,593 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] UserId deleteEntry: 1
+2025-02-11 18:23:12,606 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Entry deleted: Entrada eliminada correctamente
+2025-02-11 18:23:20,013 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] UserId deleteEntry: 1
+2025-02-11 18:23:20,021 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found
+2025-02-11 18:23:20,021 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Error deleting entry: Entry not found
+2025-02-11 18:23:35,302 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-11 18:23:35,322 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 1 and date: 2025-02-11
+2025-02-11 18:23:35,322 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 1 and date: 2025-02-11
+2025-02-11 18:25:32,280 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-11 18:25:32,315 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 1 and date: 2025-02-11
+2025-02-11 18:25:32,315 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 1 and date: 2025-02-11
+2025-02-11 18:25:37,952 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:25:37,966 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":3,"title":"546546546546","content":"tretre4gfdfdgdg","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:25:38,105 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:25:38,115 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":3,"title":"546546546546","content":"tretre4gfdfdgdg","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:25:40,504 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] UserId deleteEntry: 1
+2025-02-11 18:25:40,517 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Entry deleted: Entrada eliminada correctamente
+2025-02-11 18:27:40,517 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-11 18:27:40,539 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 1 and date: 2025-02-11
+2025-02-11 18:27:40,539 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 1 and date: 2025-02-11
+2025-02-11 18:27:43,481 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:27:43,491 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":4,"title":"fdsfs","content":"fdsfsfsdfsdf","createdAt":"2025-02-11","filePaths":[],"userId":1}
+2025-02-11 18:27:45,722 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] UserId deleteEntry: 1
+2025-02-11 18:27:45,730 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Entry deleted: Entrada eliminada correctamente

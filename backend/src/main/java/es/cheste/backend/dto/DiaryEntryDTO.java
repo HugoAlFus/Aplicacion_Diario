@@ -108,6 +108,7 @@ public class DiaryEntryDTO {
         sb.append(", content='").append(content).append('\'');
         sb.append(", createdAt=").append(createdAt);
         sb.append(", filePaths=").append(filePaths);
+        sb.append(", userId=").append(userId);
         sb.append('}');
         return sb.toString();
     }

@@ -39,10 +39,6 @@ public class DiaryEntryService {
                 .header("Content-Type", "application/json")
                 .PUT(HttpRequest.BodyPublishers.ofString(jsonBody))
                 .build();
-
-        LOGGER.info("Sending PUT request to URL: {}", BASE_URL + "/"+ entryId + "?userId=" + userId);
-        LOGGER.info("Request body: {}", jsonBody);
-
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         ErrorManagement.errorManager(response);
@@ -50,14 +46,14 @@ public class DiaryEntryService {
         return response.body();
     }
 
-    public String deleteEntry(Long userId, Long entryId) throws IOException, InterruptedException {
+    public String deleteEntry(Long entryId, Long userId) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(BASE_URL + "/" + entryId + "?userId=" + userId))
                 .header("Content-Type", "application/json")
                 .DELETE()
                 .build();
-
+        LOGGER.info("UserId deleteEntry: " + userId);
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         ErrorManagement.errorManager(response);

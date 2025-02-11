@@ -38,6 +38,13 @@ public class DiaryEntryDTO {
         this.id = id;
     }
 
+    public DiaryEntryDTO(LocalDate createdAt, String content, String title, List<String> filePaths) {
+        this.createdAt = createdAt;
+        this.content = content;
+        this.title = title;
+        this.filePaths = filePaths;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hashCode(id);
@@ -107,6 +114,7 @@ public class DiaryEntryDTO {
         sb.append(", content='").append(content).append('\'');
         sb.append(", createdAt=").append(createdAt);
         sb.append(", filePaths=").append(filePaths);
+        sb.append(", userId=").append(userId);
         sb.append('}');
         return sb.toString();
     }

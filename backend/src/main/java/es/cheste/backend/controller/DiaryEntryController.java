@@ -24,7 +24,7 @@ public class DiaryEntryController {
 
         DiaryEntry entry = diaryEntryService.createEntry(entryDTO, userId);
 
-        DiaryEntryDTO reponseDTO = new DiaryEntryDTO(entry.getId(), entry.getTitle(), entry.getContent(), entry.getCreatedAt(), entry.getFilePaths());
+        DiaryEntryDTO reponseDTO = new DiaryEntryDTO(entry.getId(), entry.getTitle(), entry.getContent(), entry.getCreatedAt(), entry.getFilePaths(), entry.getId());
 
         return ResponseEntity.ok(reponseDTO);
     }
@@ -37,7 +37,8 @@ public class DiaryEntryController {
                 entry.getTitle(),
                 entry.getContent(),
                 entry.getCreatedAt(),
-                entry.getFilePaths()
+                entry.getFilePaths(),
+                entry.getUser().getId()
         );
         return ResponseEntity.ok(responseDTO);
     }
@@ -57,7 +58,8 @@ public class DiaryEntryController {
                         entry.getTitle(),
                         entry.getContent(),
                         entry.getCreatedAt(),
-                        entry.getFilePaths()
+                        entry.getFilePaths(),
+                        entry.getUser().getId()
                 ))
                 .collect(Collectors.toList());
         return ResponseEntity.ok(responseDTOs);
@@ -71,7 +73,8 @@ public class DiaryEntryController {
                 entry.getTitle(),
                 entry.getContent(),
                 entry.getCreatedAt(),
-                entry.getFilePaths()
+                entry.getFilePaths(),
+                entry.getUser().getId()
         );
         return ResponseEntity.ok(responseDTO);
     }

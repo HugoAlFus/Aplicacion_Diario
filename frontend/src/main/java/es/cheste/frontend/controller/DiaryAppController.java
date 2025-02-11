@@ -77,21 +77,26 @@ public class DiaryAppController {
     private void saveData() {
 
         if (entryDTO == null) {
-            entryDTO = new DiaryEntryDTO(LocalDate.now(), taContent.getText(), tfTitle.getText(), listPaths, userId);
+
+            entryDTO = new DiaryEntryDTO(LocalDate.now(), taContent.getText(), tfTitle.getText(), listPaths);
+            entryDTO.setUserId(userId);
 
             try {
                 DiaryEntryDTO createdEntry = GsonUtil.getGson().fromJson(
                         diaryEntryService.createEntry(GsonUtil.getGson().toJson(entryDTO), userId), DiaryEntryDTO.class);
                 entryDTO.setId(createdEntry.getId());
+
             } catch (IOException | InterruptedException e) {
                 DialogUtil.showDialogError("Error", e.getMessage(), "Error saving");
                 LOGGER.error("Error creating DiaryEntry {}", e.getMessage());
             }
         } else {
             try {
+                LOGGER.info(userId);
                 entryDTO.setContent(taContent.getText());
                 entryDTO.setTitle(tfTitle.getText());
                 entryDTO.setFilePaths(listPaths);
+                entryDTO.setUserId(userId);
                 LOGGER.info(diaryEntryService.updateEntry(GsonUtil.getGson().toJson(entryDTO), userId, entryDTO.getId()));
             } catch (IOException | InterruptedException e) {
                 DialogUtil.showDialogError("Error", e.getMessage(), "Error updating");
@@ -147,6 +152,7 @@ public class DiaryAppController {
             setTfTitle();
             setTaContent();
             setLvFiles();
+            entryDTO.setUserId(userId);
         }
     }
 
