@@ -73,3 +73,17 @@
 2025-02-11 18:27:43,491 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":4,"title":"fdsfs","content":"fdsfsfsdfsdf","createdAt":"2025-02-11","filePaths":[],"userId":1}
 2025-02-11 18:27:45,722 INFO e.c.f.s.DiaryEntryService [JavaFX Application Thread] UserId deleteEntry: 1
 2025-02-11 18:27:45,730 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Entry deleted: Entrada eliminada correctamente
+2025-02-11 18:48:22,218 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-11 18:48:22,250 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 1 and date: 2025-02-11
+2025-02-11 18:48:22,250 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 1 and date: 2025-02-11
+2025-02-11 18:48:32,641 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:48:32,659 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":5,"title":"Print 1","content":"fdfsdfdsgfdgfdgd","createdAt":"2025-02-11","filePaths":["D:\\MyDiary\\Data\\1\\2025-02-11\\certificado_curso_de_desarrollo_de_una_api_rest_con_spring_boot.pdf"],"userId":1}
+2025-02-11 18:48:36,605 WARN o.a.p.p.f.FileSystemFontProvider [JavaFX Application Thread] 465 new fonts found, font cache will be re-built
+2025-02-11 18:48:36,605 WARN o.a.p.p.f.FileSystemFontProvider [JavaFX Application Thread] Building on-disk font cache, this may take a while
+2025-02-11 18:48:36,926 WARN o.a.p.p.f.FileSystemFontProvider [JavaFX Application Thread] Finished building on-disk font cache, found 488 fonts
+2025-02-11 18:48:36,945 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Error creating pdf D:\MyDiary\pdf\Print 1.pdf (El sistema no puede encontrar la ruta especificada)
+2025-02-11 18:48:37,292 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Error creating pdf D:\MyDiary\pdf\Print 1.pdf (El sistema no puede encontrar la ruta especificada)
+2025-02-11 18:48:37,475 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Error creating pdf D:\MyDiary\pdf\Print 1.pdf (El sistema no puede encontrar la ruta especificada)
+2025-02-11 18:49:51,099 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-11 18:49:52,308 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-11 18:49:52,324 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":5,"title":"Print 1","content":"fdfsdfdsgfdgfdgd","createdAt":"2025-02-11","filePaths":["D:\\MyDiary\\Data\\1\\2025-02-11\\certificado_curso_de_desarrollo_de_una_api_rest_con_spring_boot.pdf"],"userId":1}

@@ -6,6 +6,7 @@ module frontend {
     requires org.apache.logging.log4j;
     requires org.jspecify;
     requires java.desktop;
+    requires org.apache.pdfbox;
 
     exports es.cheste.frontend;
     exports es.cheste.frontend.controller;

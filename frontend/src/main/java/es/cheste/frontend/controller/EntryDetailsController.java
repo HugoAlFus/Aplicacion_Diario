@@ -13,6 +13,11 @@ import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.apache.pdfbox.pdmodel.font.Standard14Fonts;
 
 import java.awt.*;
 import java.io.File;
@@ -22,6 +27,7 @@ public class EntryDetailsController {
 
     private static final Logger LOGGER = LogManager.getLogger(EntryDetailsController.class);
     private final DiaryEntryService diaryEntryService = new DiaryEntryService();
+    private String path = "D:/MyDiary/pdf/";
 
     @javafx.fxml.FXML
     private TextField tfTitle;
@@ -49,6 +55,8 @@ public class EntryDetailsController {
 
         this.entryDTO = entry;
         initializeListView();
+        path += entry.getTitle() + "/";
+        new File(path).mkdirs();
     }
 
     private void initializeListView() {
@@ -95,7 +103,53 @@ public class EntryDetailsController {
             }
         } else if(actionEvent.getSource() == btnExit){
             ((Stage) btnDeleteEntry.getScene().getWindow()).close();
+        } else {
+            printEntry();
         }
+    }
 
+    private void printEntry() {
+        try (PDDocument document = new PDDocument()) {
+            PDPage page = new PDPage();
+            document.addPage(page);
+
+
+
+            try (PDPageContentStream contentStream = new PDPageContentStream(document, page)) {
+                contentStream.beginText();
+                contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD), 20);
+                contentStream.newLineAtOffset(100, 700);
+                contentStream.showText(entryDTO.getTitle());
+                contentStream.endText();
+
+                contentStream.beginText();
+                contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA), 12);
+                contentStream.newLineAtOffset(100, 650);
+                contentStream.showText(entryDTO.getContent());
+                contentStream.endText();
+
+                contentStream.beginText();
+                contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA), 12);
+                contentStream.newLineAtOffset(100, 600);
+                contentStream.showText("Files:");
+                contentStream.endText();
+
+                int yOffset = 580;
+                for (String filePath : entryDTO.getFilePaths()) {
+                    contentStream.beginText();
+                    contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA), 12);
+                    contentStream.newLineAtOffset(100, yOffset);
+                    contentStream.showText(new File(filePath).getName());
+                    contentStream.endText();
+                    yOffset -= 20;
+                }
+            }
+
+            document.save(path + ".pdf");
+            System.out.println("PDF created successfully.");
+        } catch (IOException e) {
+            LOGGER.error("Error creating pdf {}", e.getMessage());
+            DialogUtil.showDialogError("Error", "Error printing the entry", "Entry error");
+        }
     }
 }
