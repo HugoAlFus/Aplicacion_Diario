@@ -1,6 +1,7 @@
 package es.cheste.frontend.controller;
 
 import es.cheste.frontend.dto.DiaryEntryDTO;
+import es.cheste.frontend.service.DiaryEntryService;
 import es.cheste.frontend.util.DialogUtil;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
@@ -20,6 +21,8 @@ import java.io.IOException;
 public class EntryDetailsController {
 
     private static final Logger LOGGER = LogManager.getLogger(EntryDetailsController.class);
+    private final DiaryEntryService diaryEntryService = new DiaryEntryService();
+
     @javafx.fxml.FXML
     private TextField tfTitle;
     @javafx.fxml.FXML
@@ -28,10 +31,14 @@ public class EntryDetailsController {
     private TextArea taContent;
     @javafx.fxml.FXML
     private Label lbEntryDay;
-
-    private DiaryEntryDTO entryDTO;
     @javafx.fxml.FXML
     private Button btnExit;
+    @javafx.fxml.FXML
+    private Button btnPrint;
+    @javafx.fxml.FXML
+    private Button btnDeleteEntry;
+
+    private DiaryEntryDTO entryDTO;
 
     public void initializeContent(DiaryEntryDTO entry) {
 
@@ -74,6 +81,16 @@ public class EntryDetailsController {
 
         if (actionEvent.getSource() == btnExit) {
             ((Stage) btnExit.getScene().getWindow()).close();
+        }
+
+        if(actionEvent.getSource() == btnDeleteEntry){
+
+            try {
+                diaryEntryService.deleteEntry(entryDTO.getUserId(),entryDTO.getId());
+            } catch (IOException | InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
         }
 
     }

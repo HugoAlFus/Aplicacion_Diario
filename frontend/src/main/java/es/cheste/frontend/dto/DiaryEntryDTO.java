@@ -11,21 +11,31 @@ public class DiaryEntryDTO {
     private String content;
     private LocalDate createdAt;
     private List<String> filePaths;
+    private Long userId;
 
     public DiaryEntryDTO() {
         super();
     }
 
-    public DiaryEntryDTO(Long id, String title, String content, LocalDate createdAt, List<String> filePaths) {
-        this(createdAt, content, title, filePaths);
+    public DiaryEntryDTO(Long id, String title, String content, LocalDate createdAt, List<String> filePaths, Long userId) {
+        this(createdAt, content, title, filePaths, userId);
         this.id = id;
     }
 
-    public DiaryEntryDTO(LocalDate createdAt, String content, String title, List<String> filePaths) {
+    public DiaryEntryDTO(LocalDate createdAt, String content, String title, List<String> filePaths, Long userId) {
         this.createdAt = createdAt;
         this.content = content;
         this.title = title;
         this.filePaths = filePaths;
+        this.userId = userId;
+    }
+
+    public DiaryEntryDTO(String title, String content, LocalDate createdAt, List<String> filePaths, Long id) {
+        this.title = title;
+        this.content = content;
+        this.createdAt = createdAt;
+        this.filePaths = filePaths;
+        this.id = id;
     }
 
     @Override
@@ -79,6 +89,14 @@ public class DiaryEntryDTO {
 
     public void setFilePaths(List<String> filePaths) {
         this.filePaths = filePaths;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     @Override

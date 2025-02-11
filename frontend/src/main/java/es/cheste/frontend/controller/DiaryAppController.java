@@ -77,7 +77,7 @@ public class DiaryAppController {
     private void saveData() {
 
         if (entryDTO == null) {
-            entryDTO = new DiaryEntryDTO(LocalDate.now(), taContent.getText(), tfTitle.getText(), listPaths);
+            entryDTO = new DiaryEntryDTO(LocalDate.now(), taContent.getText(), tfTitle.getText(), listPaths, userId);
 
             try {
                 DiaryEntryDTO createdEntry = GsonUtil.getGson().fromJson(
