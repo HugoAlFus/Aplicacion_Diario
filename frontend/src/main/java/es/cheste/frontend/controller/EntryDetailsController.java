@@ -120,6 +120,13 @@ public class EntryDetailsController {
 
 
             try (PDPageContentStream contentStream = new PDPageContentStream(document, page)) {
+
+                contentStream.beginText();
+                contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD), 15);
+                contentStream.newLineAtOffset(100, 750);
+                contentStream.showText(entryDTO.getCreatedAt().toString());
+                contentStream.endText();
+
                 contentStream.beginText();
                 contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD), 20);
                 contentStream.newLineAtOffset(100, 700);
@@ -148,9 +155,8 @@ public class EntryDetailsController {
                     yOffset -= 20;
                 }
             }
-
             document.save(file.getAbsolutePath() + "/" + entryDTO.getCreatedAt() + ".pdf");
-            System.out.println("PDF created successfully.");
+            Desktop.getDesktop().open(new File(file.getAbsolutePath() + "/" + entryDTO.getCreatedAt() + ".pdf"));
         } catch (IOException e) {
             LOGGER.error("Error creating pdf {}", e.getMessage());
             DialogUtil.showDialogError("Error", "Error printing the entry", "Entry error");
