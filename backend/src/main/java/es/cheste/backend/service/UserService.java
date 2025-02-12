@@ -65,7 +65,7 @@ public class UserService {
 
         User user = userRepository.findByEmail(userUpdatePasswordDTO.getEmail());
 
-        if(user == null){
+        if (user == null) {
             throw new UserNotFoundException("User not found");
         }
 
@@ -77,11 +77,18 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public String getUserById(Long userId) {
+
+        User user = userRepository.findById(userId).orElseThrow(() -> new UserNotFoundException("The user id do not exist"));
+
+        return user.getUsername();
+    }
+
     public Long getUserByUsername(String username) {
 
         User user = userRepository.findByUsername(username);
 
-        if(user == null){
+        if (user == null) {
             throw new UserNotFoundException("User not found");
         }
 

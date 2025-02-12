@@ -2,6 +2,7 @@ package es.cheste.frontend.controller;
 
 import es.cheste.frontend.dto.DiaryEntryDTO;
 import es.cheste.frontend.service.DiaryEntryService;
+import es.cheste.frontend.service.UserService;
 import es.cheste.frontend.util.DialogUtil;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -22,12 +23,18 @@ import org.apache.pdfbox.pdmodel.font.Standard14Fonts;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class EntryDetailsController {
 
     private static final Logger LOGGER = LogManager.getLogger(EntryDetailsController.class);
+    private static final String BASE_PATH = "D:/MyDiary/pdf/";
     private final DiaryEntryService diaryEntryService = new DiaryEntryService();
-    private String path = "D:/MyDiary/pdf/";
+    private final UserService userService = new UserService();
+    private DiaryEntryDTO entryDTO;
+    private String usename;
+    private File file;
+
 
     @javafx.fxml.FXML
     private TextField tfTitle;
@@ -44,19 +51,17 @@ public class EntryDetailsController {
     @javafx.fxml.FXML
     private Button btnDeleteEntry;
 
-    private DiaryEntryDTO entryDTO;
-
     public void initializeContent(DiaryEntryDTO entry) {
 
+        this.entryDTO = entry;
         tfTitle.setText(entry.getTitle());
         lbEntryDay.setText(entry.getCreatedAt().toString());
         taContent.setText(entry.getContent());
         entry.getFilePaths().forEach(s -> lvFiles.getItems().add(new File(s).getName()));
 
-        this.entryDTO = entry;
         initializeListView();
-        path += entry.getTitle() + "/";
-        new File(path).mkdirs();
+        getUsername();
+        initializeFile();
     }
 
     private void initializeListView() {
@@ -101,7 +106,7 @@ public class EntryDetailsController {
                 LOGGER.error("Error deleting entry: {}", e.getMessage());
                 DialogUtil.showDialogError("Error", e.getMessage(), "Error deleting the entry");
             }
-        } else if(actionEvent.getSource() == btnExit){
+        } else if (actionEvent.getSource() == btnExit) {
             ((Stage) btnDeleteEntry.getScene().getWindow()).close();
         } else {
             printEntry();
@@ -112,7 +117,6 @@ public class EntryDetailsController {
         try (PDDocument document = new PDDocument()) {
             PDPage page = new PDPage();
             document.addPage(page);
-
 
 
             try (PDPageContentStream contentStream = new PDPageContentStream(document, page)) {
@@ -145,11 +149,26 @@ public class EntryDetailsController {
                 }
             }
 
-            document.save(path + ".pdf");
+            document.save(file.getAbsolutePath() + "/" + entryDTO.getCreatedAt() + ".pdf");
             System.out.println("PDF created successfully.");
         } catch (IOException e) {
             LOGGER.error("Error creating pdf {}", e.getMessage());
             DialogUtil.showDialogError("Error", "Error printing the entry", "Entry error");
         }
+    }
+
+    private void getUsername() {
+
+        try {
+            usename = userService.getUsernameById(entryDTO.getUserId());
+        } catch (IOException | InterruptedException e) {
+            LOGGER.error("Error getting username {}", e.getMessage());
+            DialogUtil.showDialogError("Error", "Error getting username", "Username error");
+        }
+    }
+
+    private void initializeFile() {
+        file = new File(BASE_PATH, usename + "/" + entryDTO.getCreatedAt());
+        LOGGER.info("Path created: " + file.mkdirs());
     }
 }

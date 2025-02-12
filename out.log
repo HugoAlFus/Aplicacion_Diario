@@ -87,3 +87,51 @@
 2025-02-11 18:49:51,099 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
 2025-02-11 18:49:52,308 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
 2025-02-11 18:49:52,324 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":5,"title":"Print 1","content":"fdfsdfdsgfdgfdgd","createdAt":"2025-02-11","filePaths":["D:\\MyDiary\\Data\\1\\2025-02-11\\certificado_curso_de_desarrollo_de_una_api_rest_con_spring_boot.pdf"],"userId":1}
+2025-02-12 13:52:23,230 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created true
+2025-02-12 13:52:23,275 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 1 and date: 2025-02-12
+2025-02-12 13:52:23,275 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 1 and date: 2025-02-12
+2025-02-12 13:52:40,986 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-12 13:52:41,015 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":3,"title":"dfsfsdfsdfds","content":"fsdfdsfdsfsdfsfdsfsfsfdsf","createdAt":"2025-02-12","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-12\\ejercicio_5_1.gml.txt"],"userId":1}
+2025-02-12 13:52:41,194 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-12 13:52:41,206 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":3,"title":"dfsfsdfsdfds","content":"fsdfdsfdsfsdfsfdsfsfsfdsf","createdAt":"2025-02-12","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-12\\ejercicio_5_1.gml.txt"],"userId":1}
+2025-02-12 13:52:44,275 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-12 13:52:44,275 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Error getting username 
+2025-02-12 13:52:45,463 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Path created: true
+2025-02-12 13:54:49,876 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-12 13:54:52,371 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-12 13:54:52,430 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":3,"title":"dfsfsdfsdfds","content":"fsdfdsfdsfsdfsfdsfsfsfdsf","createdAt":"2025-02-12","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-12\\ejercicio_5_1.gml.txt"],"userId":1}
+2025-02-12 13:54:56,887 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-12 13:54:56,887 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Error getting username 
+2025-02-12 13:54:58,506 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Path created: true
+2025-02-12 13:55:48,158 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-12 13:55:50,914 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-12 13:55:50,968 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":3,"title":"dfsfsdfsdfds","content":"fsdfdsfdsfsdfsfdsfsfsfdsf","createdAt":"2025-02-12","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-12\\ejercicio_5_1.gml.txt"],"userId":1}
+2025-02-12 13:55:53,418 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] UserId: 1
+2025-02-12 13:55:53,418 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Username: null
+2025-02-12 13:55:53,460 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-12 13:55:53,460 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Error getting username 
+2025-02-12 13:55:54,888 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Path created: false
+2025-02-12 13:59:06,300 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-12 13:59:09,583 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] UserId: 1
+2025-02-12 13:59:09,624 ERROR e.c.f.s.UserService [JavaFX Application Thread] 
+2025-02-12 13:59:09,624 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-12 13:59:09,624 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Error getting username 
+2025-02-12 13:59:10,538 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Path created: false
+2025-02-12 14:00:52,371 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-12 14:00:56,015 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] UserId: 1
+2025-02-12 14:00:56,035 ERROR e.c.f.s.UserService [JavaFX Application Thread] Admin
+2025-02-12 14:00:56,035 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Username: Admin
+2025-02-12 14:00:56,036 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Path created: true
+2025-02-12 14:00:58,971 WARN o.a.p.p.f.FileSystemFontProvider [JavaFX Application Thread] 477 new fonts found, font cache will be re-built
+2025-02-12 14:00:58,971 WARN o.a.p.p.f.FileSystemFontProvider [JavaFX Application Thread] Building on-disk font cache, this may take a while
+2025-02-12 14:01:00,360 WARN o.a.p.p.f.FileSystemFontProvider [JavaFX Application Thread] Finished building on-disk font cache, found 514 fonts
+2025-02-12 14:01:00,403 WARN o.a.p.p.PDDocument [JavaFX Application Thread] You are overwriting the existing file 2025-02-12.pdf, this will produce a corrupted file if you're also reading from it
+2025-02-12 14:04:25,916 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-12 14:04:27,491 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-12 14:04:27,565 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":3,"title":"dfsfsdfsdfds","content":"fsdfdsfdsfsdfsfdsfsfsfdsf","createdAt":"2025-02-12","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-12\\ejercicio_5_1.gml.txt"],"userId":1}
+2025-02-12 14:04:27,674 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-12 14:04:27,686 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":3,"title":"dfsfsdfsdfds","content":"fsdfdsfdsfsdfsfdsfsfsfdsf","createdAt":"2025-02-12","filePaths":["D:\\MyDiary\\Data\\Admin\\2025-02-12\\ejercicio_5_1.gml.txt"],"userId":1}
+2025-02-12 14:04:29,927 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] UserId: 1
+2025-02-12 14:04:29,936 ERROR e.c.f.s.UserService [JavaFX Application Thread] Admin
+2025-02-12 14:04:29,936 ERROR e.c.f.c.EntryDetailsController [JavaFX Application Thread] Username: Admin
+2025-02-12 14:04:29,942 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Path created: true
