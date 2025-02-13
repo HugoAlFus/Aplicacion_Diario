@@ -16,9 +16,9 @@ public class ReportService {
         InputStream reportStream = getClass().getResourceAsStream("/reports/jasper_report.jasper");
 
         Map<String, Object> parameters = new HashMap<>();
-        parameters.put()
 
 
 
+        return null;
     }
 }

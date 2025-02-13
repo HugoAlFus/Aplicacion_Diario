@@ -17,13 +17,13 @@ import org.apache.logging.log4j.Logger;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.pdmodel.font.Standard14Fonts;
 
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDate;
 
 public class EntryDetailsController {
 
@@ -121,38 +121,31 @@ public class EntryDetailsController {
 
             try (PDPageContentStream contentStream = new PDPageContentStream(document, page)) {
 
-                contentStream.beginText();
-                contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD), 15);
-                contentStream.newLineAtOffset(100, 750);
-                contentStream.showText(entryDTO.getCreatedAt().toString());
-                contentStream.endText();
+                PDType1Font font = new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD);
+                float[] position = new float[2];
 
-                contentStream.beginText();
-                contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD), 20);
-                contentStream.newLineAtOffset(100, 700);
-                contentStream.showText(entryDTO.getTitle());
-                contentStream.endText();
+                position[0] = 100;
+                position[1] = 750;
 
-                contentStream.beginText();
-                contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA), 12);
-                contentStream.newLineAtOffset(100, 650);
-                contentStream.showText(entryDTO.getContent());
-                contentStream.endText();
+                writePDF(contentStream, entryDTO.getCreatedAt().toString(), font, 15, position);
 
-                contentStream.beginText();
-                contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA), 12);
-                contentStream.newLineAtOffset(100, 600);
-                contentStream.showText("Files:");
-                contentStream.endText();
+                position[1] = 700;
 
-                int yOffset = 580;
+                writePDF(contentStream, entryDTO.getTitle(), font, 20, position);
+
+                font = new PDType1Font(Standard14Fonts.FontName.HELVETICA);
+                position[1] = 650;
+
+                writePDF(contentStream, entryDTO.getContent(), font, 12, position);
+
+                position[1] = 600;
+                writePDF(contentStream, "Files", font, 12, position);
+
+                position[1] = 580;
                 for (String filePath : entryDTO.getFilePaths()) {
-                    contentStream.beginText();
-                    contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA), 12);
-                    contentStream.newLineAtOffset(100, yOffset);
-                    contentStream.showText(new File(filePath).getName());
-                    contentStream.endText();
-                    yOffset -= 20;
+
+                    writePDF(contentStream, new File(filePath).getName(), font, 12, position);
+                    position[1]-=20;
                 }
             }
             document.save(file.getAbsolutePath() + "/" + entryDTO.getCreatedAt() + ".pdf");
@@ -161,6 +154,16 @@ public class EntryDetailsController {
             LOGGER.error("Error creating pdf {}", e.getMessage());
             DialogUtil.showDialogError("Error", "Error printing the entry", "Entry error");
         }
+    }
+
+    private void writePDF(PDPageContentStream contentStream, String text, PDFont font, float size, float[] position) throws IOException {
+
+        contentStream.beginText();
+        contentStream.setFont(font, size);
+        contentStream.newLineAtOffset(position[0], position[1]);
+        contentStream.showText(text);
+        contentStream.endText();
+
     }
 
     private void getUsername() {

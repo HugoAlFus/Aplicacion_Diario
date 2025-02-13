@@ -16,16 +16,30 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 
+/**
+ * Servicio para gestionar las operaciones relacionadas con los usuarios.
+ *
+ * @author Hugo Almodóvar Fuster
+ * @version 1.0
+ */
 @Service
 public class UserService {
 
     private static final Logger LOGGER = LogManager.getLogger(UserService.class);
+
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    /**
+     * Registra un nuevo usuario.
+     *
+     * @param userDTO los datos del usuario a registrar.
+     * @return el usuario registrado.
+     * @throws UserAlreadyExistsException si el nombre de usuario o el correo electrónico ya están en uso.
+     */
     public User registerUser(UserRegisterDTO userDTO) {
 
         if (userRepository.findByUsername(userDTO.getUsername()) != null) {
@@ -47,6 +61,14 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    /**
+     * Inicia sesión de un usuario.
+     *
+     * @param userLoginDTO los datos de inicio de sesión del usuario.
+     * @return el usuario que ha iniciado sesión.
+     * @throws UserNotFoundException       si el nombre de usuario es incorrecto.
+     * @throws InvalidCredentialsException si la contraseña es incorrecta.
+     */
     public User loginUser(UserLoginDTO userLoginDTO) {
 
         User user = userRepository.findByUsername(userLoginDTO.getUsername());
@@ -61,6 +83,14 @@ public class UserService {
         return user;
     }
 
+    /**
+     * Actualiza la contraseña de un usuario.
+     *
+     * @param userUpdatePasswordDTO los datos para actualizar la contraseña del usuario.
+     * @return el usuario con la contraseña actualizada.
+     * @throws UserNotFoundException si el usuario no se encuentra.
+     * @throws InvalidCredentialsException si la nueva contraseña ya está en uso.
+     */
     public User updateUserPassword(UserUpdatePasswordDTO userUpdatePasswordDTO) {
 
         User user = userRepository.findByEmail(userUpdatePasswordDTO.getEmail());
@@ -77,6 +107,13 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    /**
+     * Obtiene el nombre de usuario por su ID.
+     *
+     * @param userId el ID del usuario.
+     * @return el nombre de usuario.
+     * @throws UserNotFoundException si el usuario no se encuentra.
+     */
     public String getUserById(Long userId) {
 
         User user = userRepository.findById(userId).orElseThrow(() -> new UserNotFoundException("The user id do not exist"));
@@ -84,6 +121,13 @@ public class UserService {
         return user.getUsername();
     }
 
+    /**
+     * Obtiene el ID del usuario por su nombre de usuario.
+     *
+     * @param username el nombre de usuario.
+     * @return el ID del usuario.
+     * @throws UserNotFoundException si el usuario no se encuentra.
+     */
     public Long getUserByUsername(String username) {
 
         User user = userRepository.findByUsername(username);

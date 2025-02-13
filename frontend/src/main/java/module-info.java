@@ -7,6 +7,7 @@ module frontend {
     requires org.jspecify;
     requires java.desktop;
     requires org.apache.pdfbox;
+    requires com.github.librepdf.openpdf;
 
     exports es.cheste.frontend;
     exports es.cheste.frontend.controller;

@@ -9,14 +9,35 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+/**
+ * Clase de configuración de seguridad para la aplicación.
+ * <p>
+ * Esta clase configura la seguridad de la aplicación utilizando Spring Security.
+ * </p>
+ *
+ * @author Hugo Almodóvar Fuster
+ * @version 1.0
+ */
 @Configuration(proxyBeanMethods = false)
 public class SecurityConfig {
 
+    /**
+     * Define un bean para el codificador de contraseñas.
+     *
+     * @return una instancia de BCryptPasswordEncoder.
+     */
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
 
+    /**
+     * Configura la cadena de filtros de seguridad.
+     *
+     * @param http el objeto HttpSecurity para configurar la seguridad web.
+     * @return la cadena de filtros de seguridad configurada.
+     * @throws Exception si ocurre un error durante la configuración.
+     */
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http

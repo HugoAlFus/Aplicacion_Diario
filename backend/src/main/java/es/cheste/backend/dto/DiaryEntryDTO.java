@@ -1,10 +1,15 @@
 package es.cheste.backend.dto;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Data Transfer Object (DTO) para las entradas del diario.
+ *
+ * @author Hugo Almodóvar Fuster
+ * @version 1.0
+ */
 public class DiaryEntryDTO {
 
     private Long id;
@@ -14,25 +19,51 @@ public class DiaryEntryDTO {
     private List<String> filePaths;
     private Long userId;
 
+    /**
+     * Constructor por defecto.
+     */
     public DiaryEntryDTO() {
         super();
     }
 
+    /**
+     * Constructor con todos los campos.
+     *
+     * @param id        el ID de la entrada.
+     * @param title     el título de la entrada.
+     * @param content   el contenido de la entrada.
+     * @param createdAt la fecha de creación de la entrada.
+     * @param filePaths las rutas de los archivos adjuntos a la entrada.
+     * @param userId    el ID del usuario que creó la entrada.
+     */
     public DiaryEntryDTO(Long id, String title, String content, LocalDate createdAt, List<String> filePaths, Long userId) {
         this(createdAt, content, title, filePaths, userId);
         this.id = id;
     }
 
+    /**
+     * Constructor sin el campo ID.
+     *
+     * @param createdAt la fecha de creación de la entrada.
+     * @param content el contenido de la entrada.
+     * @param title el título de la entrada.
+     * @param filePaths las rutas de los archivos adjuntos a la entrada.
+     * @param userId el ID del usuario que creó la entrada.
+     */
     public DiaryEntryDTO(LocalDate createdAt, String content, String title, List<String> filePaths, Long userId) {
-        this.createdAt = createdAt;
-        this.content = content;
-        this.title = title;
-        this.filePaths = filePaths;
+        this(title, content, createdAt, filePaths);
         this.userId = userId;
     }
 
-    public DiaryEntryDTO(Long id, String title, String content, LocalDate createdAt, List<String> filePaths) {
-        this.id = id;
+    /**
+     * Constructor sin el campo userId.
+     *
+     * @param title     el título de la entrada.
+     * @param content   el contenido de la entrada.
+     * @param createdAt la fecha de creación de la entrada.
+     * @param filePaths las rutas de los archivos adjuntos a la entrada.
+     */
+    public DiaryEntryDTO(String title, String content, LocalDate createdAt, List<String> filePaths) {
         this.title = title;
         this.content = content;
         this.createdAt = createdAt;
