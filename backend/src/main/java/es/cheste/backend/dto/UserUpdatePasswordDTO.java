@@ -11,8 +11,8 @@ import java.util.Objects;
 public class UserUpdatePasswordDTO {
 
     private String email;
-    private String oldPassword;
-    private String newPassword;
+    private String password;
+    private String confirmPassword;
 
     /**
      * Constructor por defecto.
@@ -25,13 +25,13 @@ public class UserUpdatePasswordDTO {
      * Constructor con todos los campos.
      *
      * @param email       el correo electrónico del usuario.
-     * @param oldPassword la contraseña antigua del usuario.
+     * @param password la contraseña antigua del usuario.
      * @param newPassword la nueva contraseña del usuario.
      */
-    public UserUpdatePasswordDTO(String email, String oldPassword, String newPassword) {
+    public UserUpdatePasswordDTO(String email, String password, String newPassword) {
         this.email = email;
-        this.oldPassword = oldPassword;
-        this.newPassword = newPassword;
+        this.password = password;
+        this.confirmPassword = newPassword;
     }
 
     @Override
@@ -52,17 +52,17 @@ public class UserUpdatePasswordDTO {
      *
      * @return la contraseña antigua del usuario.
      */
-    public String getOldPassword() {
-        return oldPassword;
+    public String getPassword() {
+        return password;
     }
 
     /**
      * Establece la contraseña antigua del usuario.
      *
-     * @param oldPassword la contraseña antigua del usuario.
+     * @param password la contraseña antigua del usuario.
      */
-    public void setOldPassword(String oldPassword) {
-        this.oldPassword = oldPassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     /**
@@ -70,23 +70,25 @@ public class UserUpdatePasswordDTO {
      *
      * @return la nueva contraseña del usuario.
      */
-    public String getNewPassword() {
-        return newPassword;
+    public String getConfirmPassword() {
+        return confirmPassword;
     }
 
     /**
      * Establece la nueva contraseña del usuario.
      *
-     * @param newPassword la nueva contraseña del usuario.
+     * @param confirmPassword la nueva contraseña del usuario.
      */
-    public void setNewPassword(String newPassword) {
-        this.newPassword = newPassword;
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
     }
 
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("UserUpdatePasswordDTO{");
         sb.append("email='").append(email).append('\'');
+        sb.append(", password='").append(password).append('\'');
+        sb.append(", confirmPassword='").append(confirmPassword).append('\'');
         sb.append('}');
         return sb.toString();
     }

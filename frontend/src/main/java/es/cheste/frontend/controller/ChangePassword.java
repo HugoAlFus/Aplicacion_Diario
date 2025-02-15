@@ -46,7 +46,7 @@ public class ChangePassword {
                     UserUpdatePasswordDTO user = new UserUpdatePasswordDTO(tfEmail.getText(), pfCurrentPassword.getText(), pfNewPassword.getText());
 
                     String json = new Gson().toJson(user);
-
+                    LOGGER.info(json);
                     try {
                         LOGGER.info(userService.updateUser(json));
                         WindowManagement.openNewWindow("/es/cheste/frontend/auth/login.fxml", "Login", (Stage) btnUpdatePassword.getScene().getWindow(), null);

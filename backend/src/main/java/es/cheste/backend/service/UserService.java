@@ -93,16 +93,20 @@ public class UserService {
      */
     public User updateUserPassword(UserUpdatePasswordDTO userUpdatePasswordDTO) {
 
+        System.out.println("email: " + userUpdatePasswordDTO.getEmail());
         User user = userRepository.findByEmail(userUpdatePasswordDTO.getEmail());
+
+        System.out.println("User " + user);
+        System.out.println(userUpdatePasswordDTO);
 
         if (user == null) {
             throw new UserNotFoundException("User not found");
         }
 
-        if (passwordEncoder.matches(userUpdatePasswordDTO.getNewPassword(), user.getPassword())) {
-            throw new InvalidCredentialsException("The new password is already in use");
+        if (!userUpdatePasswordDTO.getPassword().equals(userUpdatePasswordDTO.getConfirmPassword())) {
+            throw new InvalidCredentialsException("The must be the same");
         }
-        user.setPassword(passwordEncoder.encode(userUpdatePasswordDTO.getNewPassword()));
+        user.setPassword(passwordEncoder.encode(userUpdatePasswordDTO.getConfirmPassword()));
 
         return userRepository.save(user);
     }
