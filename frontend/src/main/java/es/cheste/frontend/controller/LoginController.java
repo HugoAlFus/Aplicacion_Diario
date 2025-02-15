@@ -16,9 +16,16 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
+/**
+ * Controlador para gestionar el inicio de sesión de los usuarios.
+ *
+ * @author Hugo Almodóvar Fuster
+ * @version 1.0
+ */
 public class LoginController {
 
     private static final Logger LOGGER = LogManager.getLogger(LoginController.class);
+    private final UserService userService = new UserService();
 
     @javafx.fxml.FXML
     private Button btnForgotPassword;
@@ -28,13 +35,16 @@ public class LoginController {
     private PasswordField pfPassword;
     @javafx.fxml.FXML
     private Button btnLog;
-
-    private UserService userService = new UserService();
     @javafx.fxml.FXML
     private Label lbError;
     @javafx.fxml.FXML
     private Button btnExit;
 
+    /**
+     * Maneja los eventos de clic en los botones de la interfaz.
+     *
+     * @param actionEvent el evento de acción.
+     */
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
 
@@ -48,6 +58,9 @@ public class LoginController {
         } else System.exit(0);
     }
 
+    /**
+     * Inicia sesión del usuario con las credenciales proporcionadas.
+     */
     private void logUser() {
         UserLoginDTO user = new UserLoginDTO(tfUsername.getText(), pfPassword.getText());
 
@@ -61,10 +74,8 @@ public class LoginController {
                 pfPassword.setText(null);
             }
         } catch (InterruptedException | IOException e) {
-            DialogUtil.showDialogError("Error", "Incorrect username or password", "Error login username");
-            lbError.setText(e.getMessage());
-            pfPassword.setText(null);
-
+            LOGGER.error("Error logging in user: {}", e.getMessage());
+            DialogUtil.showDialogError("Error", e.getMessage(), "Login error");
         }
     }
 }

@@ -16,6 +16,12 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
+/**
+ * Controlador para gestionar el cambio de contraseña de un usuario.
+ *
+ * @author Hugo Almodóvar Fuster
+ * @version 1.0
+ */
 public class ChangePassword {
 
     private static final Logger LOGGER = LogManager.getLogger(ChangePassword.class);
@@ -35,14 +41,19 @@ public class ChangePassword {
 
     private final UserService userService = new UserService();
 
+    /**
+     * Maneja los eventos de clic en los botones de la interfaz.
+     *
+     * @param actionEvent el evento de acción.
+     */
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
 
         if (actionEvent.getSource() == btnUpdatePassword) {
 
-            if (!tfEmail.getText().isEmpty()|| !pfCurrentPassword.getText().isEmpty() || !pfNewPassword.getText().isEmpty()) {
+            if (!tfEmail.getText().isEmpty() || !pfCurrentPassword.getText().isEmpty() || !pfNewPassword.getText().isEmpty()) {
 
-                if(pfCurrentPassword.getText().equals(pfNewPassword.getText())) {
+                if (pfCurrentPassword.getText().equals(pfNewPassword.getText())) {
                     UserUpdatePasswordDTO user = new UserUpdatePasswordDTO(tfEmail.getText(), pfCurrentPassword.getText(), pfNewPassword.getText());
 
                     String json = new Gson().toJson(user);
@@ -64,6 +75,8 @@ public class ChangePassword {
                     pfCurrentPassword.setText(null);
                 }
             }
-        } else System.exit(0);
+        } else {
+            System.exit(0);
+        }
     }
 }

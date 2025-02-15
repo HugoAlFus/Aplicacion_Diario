@@ -25,6 +25,12 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Controlador para gestionar los detalles de una entrada de diario.
+ *
+ * @author Hugo Almodóvar Fuster
+ * @version 1.0
+ */
 public class EntryDetailsController {
 
     private static final Logger LOGGER = LogManager.getLogger(EntryDetailsController.class);
@@ -34,7 +40,6 @@ public class EntryDetailsController {
     private DiaryEntryDTO entryDTO;
     private String usename;
     private File file;
-
 
     @javafx.fxml.FXML
     private TextField tfTitle;
@@ -51,8 +56,12 @@ public class EntryDetailsController {
     @javafx.fxml.FXML
     private Button btnDeleteEntry;
 
+    /**
+     * Inicializa el contenido del controlador con la entrada de diario proporcionada.
+     *
+     * @param entry la entrada de diario a mostrar.
+     */
     public void initializeContent(DiaryEntryDTO entry) {
-
         this.entryDTO = entry;
         tfTitle.setText(entry.getTitle());
         lbEntryDay.setText(entry.getCreatedAt().toString());
@@ -64,6 +73,9 @@ public class EntryDetailsController {
         initializeFile();
     }
 
+    /**
+     * Inicializa la vista de lista para los archivos adjuntos.
+     */
     private void initializeListView() {
         lvFiles.setOnMouseClicked(event -> {
             if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
@@ -72,6 +84,11 @@ public class EntryDetailsController {
         });
     }
 
+    /**
+     * Abre el archivo seleccionado de la lista de archivos.
+     *
+     * @param fileName el nombre del archivo a abrir.
+     */
     private void openFile(String fileName) {
         try {
             for (String path : entryDTO.getFilePaths()) {
@@ -89,9 +106,13 @@ public class EntryDetailsController {
         }
     }
 
+    /**
+     * Maneja los eventos de clic en los botones de la interfaz.
+     *
+     * @param actionEvent el evento de acción.
+     */
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
-
         if (actionEvent.getSource() == btnDeleteEntry) {
             if (entryDTO.getUserId() == null) {
                 DialogUtil.showDialogError("Error", "User ID is missing", "Deletion Failed");
@@ -113,14 +134,15 @@ public class EntryDetailsController {
         }
     }
 
+    /**
+     * Imprime la entrada de diario en un archivo PDF.
+     */
     private void printEntry() {
         try (PDDocument document = new PDDocument()) {
             PDPage page = new PDPage();
             document.addPage(page);
 
-
             try (PDPageContentStream contentStream = new PDPageContentStream(document, page)) {
-
                 PDType1Font font = new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD);
                 float[] position = new float[2];
 
@@ -143,9 +165,8 @@ public class EntryDetailsController {
 
                 position[1] = 580;
                 for (String filePath : entryDTO.getFilePaths()) {
-
                     writePDF(contentStream, new File(filePath).getName(), font, 12, position);
-                    position[1]-=20;
+                    position[1] -= 20;
                 }
             }
             document.save(file.getAbsolutePath() + "/" + entryDTO.getCreatedAt() + ".pdf");
@@ -156,26 +177,38 @@ public class EntryDetailsController {
         }
     }
 
+    /**
+     * Escribe texto en el archivo PDF.
+     *
+     * @param contentStream el flujo de contenido del PDF.
+     * @param text el texto a escribir.
+     * @param font la fuente del texto.
+     * @param size el tamaño de la fuente.
+     * @param position la posición del texto en la página.
+     * @throws IOException si ocurre un error al escribir en el PDF.
+     */
     private void writePDF(PDPageContentStream contentStream, String text, PDFont font, float size, float[] position) throws IOException {
-
         contentStream.beginText();
         contentStream.setFont(font, size);
         contentStream.newLineAtOffset(position[0], position[1]);
         contentStream.showText(text);
         contentStream.endText();
-
     }
 
+    /**
+     * Obtiene el nombre de usuario a partir del ID de usuario.
+     */
     private void getUsername() {
-
         try {
             usename = userService.getUsernameById(entryDTO.getUserId());
         } catch (IOException | InterruptedException e) {
             LOGGER.error("Error getting username {}", e.getMessage());
-            DialogUtil.showDialogError("Error", "Error getting username", "Username error");
         }
     }
 
+    /**
+     * Inicializa el archivo para guardar el PDF.
+     */
     private void initializeFile() {
         file = new File(BASE_PATH, usename + "/" + entryDTO.getCreatedAt());
         LOGGER.info("Path created: " + file.mkdirs());

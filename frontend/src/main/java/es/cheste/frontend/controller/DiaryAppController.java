@@ -31,6 +31,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * Controlador para gestionar la aplicación de diario.
+ *
+ * @author Hugo Almodóvar Fuster
+ * @version 1.0
+ */
 public class DiaryAppController {
 
     private static final DateTimeFormatter MONTH_FORMAT = DateTimeFormatter.ofPattern("MMMM", new Locale("en", "EN"));
@@ -62,6 +68,11 @@ public class DiaryAppController {
     private List<String> listPaths = new ArrayList<>();
     private File data;
 
+    /**
+     * Maneja los eventos de clic en los botones de la interfaz.
+     *
+     * @param actionEvent el evento de acción.
+     */
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
 
@@ -74,6 +85,9 @@ public class DiaryAppController {
         } else System.exit(0);
     }
 
+    /**
+     * Guarda los datos de la entrada de diario.
+     */
     private void saveData() {
 
         if (entryDTO == null) {
@@ -106,6 +120,24 @@ public class DiaryAppController {
 
     }
 
+    /**
+     * Lista todas las entradas de diario del usuario.
+     */
+    private void listEntries() {
+        try {
+            Type lisType = new TypeToken<List<DiaryEntryDTO>>() {
+            }.getType();
+            List<DiaryEntryDTO> list = GsonUtil.getGson().fromJson(diaryEntryService.getEntriesByUserId(userId), lisType);
+            WindowManagement.openNewWindow("/es/cheste/frontend/app/ListEntriesController.fxml", "Entries", (Stage) btnSave.getScene().getWindow(), list);
+        } catch (IOException | InterruptedException e) {
+            DialogUtil.showDialogError("Error", e.getMessage(), "List entry error");
+            LOGGER.error("Error in the listEntries {}", e.getMessage());
+        }
+    }
+
+    /**
+     * Abre un cuadro de diálogo para seleccionar un archivo y lo agrega a la lista de archivos.
+     */
     private void chooseFile() {
 
         File file = fileChooser.showOpenDialog(btnList.getScene().getWindow());
@@ -125,18 +157,11 @@ public class DiaryAppController {
         }
     }
 
-    private void listEntries() {
-        try {
-            Type lisType = new TypeToken<List<DiaryEntryDTO>>() {
-            }.getType();
-            List<DiaryEntryDTO> list = GsonUtil.getGson().fromJson(diaryEntryService.getEntriesByUserId(userId), lisType);
-            WindowManagement.openNewWindow("/es/cheste/frontend/app/ListEntriesController.fxml", "Entries", (Stage) btnSave.getScene().getWindow(), list);
-        } catch (IOException | InterruptedException e) {
-            DialogUtil.showDialogError("Error", e.getMessage(), "List entry error");
-            LOGGER.error("Error in the listEntries {}", e.getMessage());
-        }
-    }
-
+    /**
+     * Inicializa el contenido de la aplicación de diario.
+     *
+     * @param username el nombre de usuario.
+     */
     public void initializeContent(String username) {
         data = new File("D:/MyDiary/Data/" + username + "/" + LocalDate.now());
         this.username = username;
@@ -156,6 +181,53 @@ public class DiaryAppController {
         }
     }
 
+    /**
+     * Establece el ID del usuario.
+     */
+    private void setUserId() {
+
+        try {
+            userId = Long.valueOf(userService.getUserByUsername(username));
+        } catch (IOException | InterruptedException e) {
+            DialogUtil.showDialogError("Error", e.getMessage(), "Error searching the user");
+            LOGGER.error("username not found {}", e.getMessage());
+            System.exit(0);
+        }
+    }
+
+    /**
+     * Establece la entrada de diario actual.
+     */
+    private void setEntryDTO() {
+
+        try {
+            entryDTO = GsonUtil.getGson().fromJson(diaryEntryService.findEntryByIdAndDate(userId, LocalDate.now()), DiaryEntryDTO.class);
+        } catch (IOException | InterruptedException e) {
+            LOGGER.info("Diary entry not found {}", e.getMessage());
+            entryDTO = null;
+        }
+    }
+
+    /**
+     * Establece la fecha actual en el formato adecuado.
+     *
+     * @return la fecha formateada.
+     */
+    private String setDate() {
+
+        LocalDate date = LocalDate.now();
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(date.getDayOfMonth());
+        sb.append(" ").append(date.format(MONTH_FORMAT));
+        sb.append(" ").append(date.getYear());
+
+        return sb.toString();
+    }
+
+    /**
+     * Inicializa los filtros de extensión de archivos para el selector de archivos.
+     */
     private void initializePaths() {
         fileChooser.setTitle("Select a file");
 
@@ -166,6 +238,9 @@ public class DiaryAppController {
         );
     }
 
+    /**
+     * Inicializa la vista de lista para los archivos.
+     */
     private void initializeListView() {
         lvFiles.setOnMouseClicked(event -> {
             if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
@@ -174,6 +249,34 @@ public class DiaryAppController {
         });
     }
 
+    /**
+     * Establece el título de la entrada de diario en el campo de texto.
+     */
+    private void setTfTitle() {
+        tfTitle.setText(entryDTO.getTitle());
+    }
+
+    /**
+     * Establece el contenido de la entrada de diario en el área de texto.
+     */
+    private void setTaContent() {
+        taContent.setText(entryDTO.getContent());
+    }
+
+    /**
+     * Establece la lista de archivos en la vista de lista.
+     */
+    private void setLvFiles() {
+        this.listPaths = entryDTO.getFilePaths();
+
+        listPaths.forEach(s -> lvFiles.getItems().add(new File(s).getName()));
+    }
+
+    /**
+     * Abre un archivo seleccionado de la lista de archivos.
+     *
+     * @param fileName el nombre del archivo a abrir.
+     */
     private void openFile(String fileName) {
         try {
             for (String path : listPaths) {
@@ -189,52 +292,5 @@ public class DiaryAppController {
             DialogUtil.showDialogError("Error", e.getMessage(), "Error opening file");
             LOGGER.error("Error opening file {}", e.getMessage());
         }
-    }
-
-    private void setUserId() {
-
-        try {
-            userId = Long.valueOf(userService.getUserByUsername(username));
-        } catch (IOException | InterruptedException e) {
-            DialogUtil.showDialogError("Error", e.getMessage(), "Error searching the user");
-            LOGGER.error("username not found {}", e.getMessage());
-            System.exit(0);
-        }
-    }
-
-    private void setEntryDTO() {
-
-        try {
-            entryDTO = GsonUtil.getGson().fromJson(diaryEntryService.findEntryByIdAndDate(userId, LocalDate.now()), DiaryEntryDTO.class);
-        } catch (IOException | InterruptedException e) {
-            LOGGER.info("Diary entry not found {}", e.getMessage());
-            entryDTO = null;
-        }
-    }
-
-    private String setDate() {
-
-        LocalDate date = LocalDate.now();
-        StringBuilder sb = new StringBuilder();
-
-        sb.append(date.getDayOfMonth());
-        sb.append(" ").append(date.format(MONTH_FORMAT));
-        sb.append(" ").append(date.getYear());
-
-        return sb.toString();
-    }
-
-    private void setTfTitle() {
-        tfTitle.setText(entryDTO.getTitle());
-    }
-
-    private void setLvFiles() {
-        this.listPaths = entryDTO.getFilePaths();
-
-        listPaths.forEach(s -> lvFiles.getItems().add(new File(s).getName()));
-    }
-
-    private void setTaContent() {
-        taContent.setText(entryDTO.getContent());
     }
 }

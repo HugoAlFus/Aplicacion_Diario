@@ -12,6 +12,12 @@ import javafx.stage.Stage;
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * Controlador para gestionar la lista de entradas de diario.
+ *
+ * @author Hugo Almodóvar Fuster
+ * @version 1.0
+ */
 public class ListEntriesController {
 
     @javafx.fxml.FXML
@@ -23,11 +29,19 @@ public class ListEntriesController {
     @javafx.fxml.FXML
     private ListView<String> lvEntries;
 
+    /**
+     * Inicializa el contenido del controlador con la lista de entradas de diario.
+     *
+     * @param listEntry la lista de entradas de diario.
+     */
     public void initializedContent(List<DiaryEntryDTO> listEntry) {
         this.listEntry = listEntry;
         loadEntries();
     }
 
+    /**
+     * Carga las entradas de diario en la vista de lista.
+     */
     private void loadEntries() {
         dpEntries.setOnAction(event -> {
             LocalDate selectedDate = dpEntries.getValue();
@@ -47,6 +61,11 @@ public class ListEntriesController {
         });
     }
 
+    /**
+     * Muestra las entradas de diario para una fecha específica.
+     *
+     * @param date la fecha seleccionada.
+     */
     private void showEntriesForDate(LocalDate date) {
         boolean thereIsEntry = Boolean.FALSE;
 
@@ -62,10 +81,20 @@ public class ListEntriesController {
         }
     }
 
+    /**
+     * Muestra los detalles de una entrada de diario.
+     *
+     * @param entryDTO la entrada de diario a mostrar.
+     */
     private void showEntryDetails(DiaryEntryDTO entryDTO) {
-        WindowManagement.openNewWindow("/es/cheste/frontend/app/EntryDetails.fxml", "Entry Details", ((Stage) btnExit.getScene().getWindow()) , entryDTO);
+        WindowManagement.openNewWindow("/es/cheste/frontend/app/EntryDetails.fxml", "Entry Details", ((Stage) btnExit.getScene().getWindow()), entryDTO);
     }
 
+    /**
+     * Maneja los eventos de clic en los botones de la interfaz.
+     *
+     * @param actionEvent el evento de acción.
+     */
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
 

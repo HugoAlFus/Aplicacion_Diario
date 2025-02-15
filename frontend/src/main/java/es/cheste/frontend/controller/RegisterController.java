@@ -18,9 +18,16 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
+/**
+ * Controlador para gestionar el registro de nuevos usuarios.
+ *
+ * @author Hugo Almodóvar Fuster
+ * @version 1.0
+ */
 public class RegisterController {
 
     private static final Logger LOGGER = LogManager.getLogger(RegisterController.class);
+    private final UserService userService = new UserService();
 
     @javafx.fxml.FXML
     private TextField tfUsername;
@@ -32,11 +39,14 @@ public class RegisterController {
     private Button btnCreateAccount;
     @javafx.fxml.FXML
     private Label lbError;
-
-    private final UserService userService = new UserService();
     @FXML
     private Button btnExit;
 
+    /**
+     * Maneja los eventos de clic en los botones de la interfaz.
+     *
+     * @param actionEvent el evento de acción.
+     */
     @javafx.fxml.FXML
     public void onClick(ActionEvent actionEvent) {
 
