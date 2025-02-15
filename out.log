@@ -157,3 +157,8 @@
 2025-02-12 14:20:21,381 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
 2025-02-12 14:20:29,441 ERROR e.c.f.s.UserService [JavaFX Application Thread] Admin
 2025-02-12 14:20:29,447 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Path created: true
+2025-02-13 18:19:19,579 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created true
+2025-02-13 18:19:19,620 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 1 and date: 2025-02-13
+2025-02-13 18:19:19,620 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 1 and date: 2025-02-13
+2025-02-13 18:19:26,151 ERROR e.c.f.s.UserService [JavaFX Application Thread] 1
+2025-02-13 18:19:26,151 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Path created: true
