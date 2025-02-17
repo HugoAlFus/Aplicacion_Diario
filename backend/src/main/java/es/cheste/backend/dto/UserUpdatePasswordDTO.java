@@ -26,12 +26,12 @@ public class UserUpdatePasswordDTO {
      *
      * @param email       el correo electrónico del usuario.
      * @param password la contraseña antigua del usuario.
-     * @param newPassword la nueva contraseña del usuario.
+     * @param confirmPassword la nueva contraseña del usuario.
      */
-    public UserUpdatePasswordDTO(String email, String password, String newPassword) {
+    public UserUpdatePasswordDTO(String email, String password, String confirmPassword) {
         this.email = email;
         this.password = password;
-        this.confirmPassword = newPassword;
+        this.confirmPassword = confirmPassword;
     }
 
     @Override

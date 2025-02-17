@@ -2,16 +2,30 @@ package es.cheste.frontend.dto;
 
 import java.util.Objects;
 
+/**
+ * Data Transfer Object (DTO) para los usuarios.
+ *
+ * @author Hugo Almodóvar Fuster
+ * @version 1.0
+ */
 public class UserDTO {
 
     private String username;
     private String email;
 
+    /**
+     * Constructor por defecto.
+     */
     public UserDTO() {
         super();
-
     }
 
+    /**
+     * Constructor con todos los campos.
+     *
+     * @param username el nombre de usuario.
+     * @param email    el correo electrónico del usuario.
+     */
     public UserDTO(String username, String email) {
         this.username = username;
         this.email = email;
@@ -30,18 +44,38 @@ public class UserDTO {
         return Objects.hash(username, email);
     }
 
+    /**
+     * Obtiene el nombre de usuario.
+     *
+     * @return el nombre de usuario.
+     */
     public String getUsername() {
         return username;
     }
 
+    /**
+     * Establece el nombre de usuario.
+     *
+     * @param username el nombre de usuario.
+     */
     public void setUsername(String username) {
         this.username = username;
     }
 
+    /**
+     * Obtiene el correo electrónico del usuario.
+     *
+     * @return el correo electrónico del usuario.
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     * Establece el correo electrónico del usuario.
+     *
+     * @param email el correo electrónico del usuario.
+     */
     public void setEmail(String email) {
         this.email = email;
     }

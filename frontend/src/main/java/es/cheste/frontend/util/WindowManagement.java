@@ -17,15 +17,30 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Clase de utilidad para la gestión de ventanas en la aplicación.
+ *
+ * @author Hugo Almodóvar Fuster
+ * @version 1.0
+ */
 public class WindowManagement {
 
     private static final Logger LOGGER = LogManager.getLogger(WindowManagement.class);
 
+    // Variables para almacenar el desplazamiento de la ventana
     private static double xOffset = 0;
     private static double yOffset = 0;
 
+    /**
+     * Abre una nueva ventana con el FXML especificado.
+     *
+     * @param path         la ruta del archivo FXML
+     * @param title        el título de la nueva ventana
+     * @param currentStage la ventana actual que se cerrará (puede ser null)
+     * @param object       el objeto que se pasará al controlador de la nueva ventana
+     */
     public static void openNewWindow(String path, String title, Stage currentStage, Object object) {
-        try{
+        try {
             FXMLLoader fxmlLoader = new FXMLLoader(WindowManagement.class.getResource(path));
             Parent root = fxmlLoader.load();
 
@@ -44,7 +59,7 @@ public class WindowManagement {
             if (controller instanceof ListEntriesController) {
                 ((ListEntriesController) controller).initializedContent((List<DiaryEntryDTO>) object);
             }
-            if(controller instanceof EntryDetailsController){
+            if (controller instanceof EntryDetailsController) {
                 ((EntryDetailsController) controller).initializeContent(((DiaryEntryDTO) object));
             }
 
@@ -66,11 +81,10 @@ public class WindowManagement {
                 currentStage.close();
             }
 
-        }catch (IOException e){
+        } catch (IOException e) {
             LOGGER.error("An error occurred when trying to open the window.\nPath: {}\n Error: {}", path, e.getMessage());
             System.err.println("An error ocurred");
             System.exit(1);
-
         }
     }
 }
