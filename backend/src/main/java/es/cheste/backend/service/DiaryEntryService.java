@@ -1,6 +1,5 @@
 package es.cheste.backend.service;
 
-import es.cheste.backend.dto.DiaryEntryDTO;
 import es.cheste.backend.exception.EntryNotFoundException;
 import es.cheste.backend.exception.PermissionDeniedException;
 import es.cheste.backend.exception.UserNotFoundException;
@@ -8,6 +7,7 @@ import es.cheste.backend.model.DiaryEntry;
 import es.cheste.backend.model.User;
 import es.cheste.backend.repository.DiaryEntryRepository;
 import es.cheste.backend.repository.UserRepository;
+import es.cheste.backend.dto.DiaryEntryDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

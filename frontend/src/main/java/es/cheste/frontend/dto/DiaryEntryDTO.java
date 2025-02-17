@@ -51,7 +51,7 @@ public class DiaryEntryDTO {
      * @param userId el ID del usuario que creó la entrada.
      */
     public DiaryEntryDTO(LocalDate createdAt, String content, String title, List<String> filePaths, Long userId) {
-        this(title, content, createdAt, filePaths);
+        this(createdAt, content, title, filePaths);
         this.userId = userId;
     }
 
@@ -63,7 +63,7 @@ public class DiaryEntryDTO {
      * @param createdAt la fecha de creación de la entrada.
      * @param filePaths las rutas de los archivos adjuntos a la entrada.
      */
-    public DiaryEntryDTO(String title, String content, LocalDate createdAt, List<String> filePaths) {
+    public DiaryEntryDTO(LocalDate createdAt, String content, String title, List<String> filePaths) {
         this.title = title;
         this.content = content;
         this.createdAt = createdAt;
