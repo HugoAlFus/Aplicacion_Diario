@@ -2,6 +2,7 @@ package es.cheste.backend.repository;
 
 import es.cheste.backend.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * Repositorio para gestionar las operaciones CRUD de los usuarios.
@@ -9,6 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author Hugo Almodóvar Fuster
  * @version 1.0
  */
+@Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
     /**

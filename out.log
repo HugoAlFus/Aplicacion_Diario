@@ -6,3 +6,10 @@
 2025-02-15 22:33:28,538 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
 2025-02-15 22:36:56,975 INFO e.c.f.c.ChangePassword [JavaFX Application Thread] {"email":"admin@gmail.com","password":"3","confirmPassword":"3"}
 2025-02-15 22:36:57,468 INFO e.c.f.c.ChangePassword [JavaFX Application Thread] {"username":"Admin","email":"admin@gmail.com"}
+2025-02-17 13:37:04,493 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created true
+2025-02-17 13:37:04,543 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 1 and date: 2025-02-17
+2025-02-17 13:37:04,544 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 1 and date: 2025-02-17
+2025-02-17 13:37:08,873 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-17 13:37:08,894 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":5,"title":"dsafesdsd","content":"dfsdsfdsfdF","createdAt":"2025-02-17","filePaths":[],"userId":1}
+2025-02-17 13:37:09,040 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
+2025-02-17 13:37:09,051 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":5,"title":"dsafesdsd","content":"dfsdsfdsfdF","createdAt":"2025-02-17","filePaths":[],"userId":1}

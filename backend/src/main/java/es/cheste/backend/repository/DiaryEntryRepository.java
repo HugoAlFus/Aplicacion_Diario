@@ -2,6 +2,7 @@ package es.cheste.backend.repository;
 
 import es.cheste.backend.model.DiaryEntry;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.Optional;
  * @author Hugo Almodóvar Fuster
  * @version 1.0
  */
+@Repository
 public interface DiaryEntryRepository extends JpaRepository<DiaryEntry, Long> {
 
     /**
