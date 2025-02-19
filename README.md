@@ -7,19 +7,19 @@
 ## Índice
 
 1. [Comenzando](#comenzando-)
-   2. [Explicación del proyecto](#expliación-del-proyecto-)
-   3. [Explicación de la Base de Datos](#explicación-de-la-base-de-datos-)
-   4. [Características principales](#características-principales-)
-   5. [Estructura del proyecto](#esctructura-del-proyecto-)
-      6. [Backend](#backend-)
-      7. [Frontend](#frontend-)
-   8. [Pre-requisito](#pre-requisitos-)
-   9. [Instalación](#instalación-)
-10. [Instrucciones de uso](#instrucciones-de-uso-)
-11. [Construido con](#construido-con-)
-12. [Autor](#autor-)
-    13. [Contacto](#contacto-)
-14. [Licencia](#licencia-)
+   1. [Explicación del proyecto](#expliación-del-proyecto-)
+   2. [Explicación de la Base de Datos](#explicación-de-la-base-de-datos-)
+   3. [Características principales](#características-principales-)
+   4. [Estructura del proyecto](#esctructura-del-proyecto-)
+      1. [Backend](#backend-)
+      2. [Frontend](#frontend-)
+   5. [Pre-requisito](#pre-requisitos-)
+   6. [Instalación](#instalación-)
+2. [Instrucciones de uso](#instrucciones-de-uso-)
+3. [Construido con](#construido-con-)
+4. [Autor](#autor-)
+   13. [Contacto](#contacto-)
+5. [Licencia](#licencia-)
 
 * * *
 
@@ -110,9 +110,9 @@ Para instalar y configurar el proyecto, sigue estos pasos:
         cd <NOMBRE_DEL_REPOSITORIO>
 2. Configurar la base de datos:
 
-* Crea una base de datos en PostgreSQL.
-* Actualiza el archivo [_application.properties_](backend/src/main/resources/application.properties) con las
-  credenciales de tu base de datos:
+* Crear una base de datos en PostgreSQL.
+* Actualizar el archivo [_application.properties_](backend/src/main/resources/application.properties) con las
+  credenciales de la base de datos:
 
         spring.datasource.url=jdbc:postgresql://localhost:5432/tu_base_de_datos
         spring.datasource.username=tu_usuario
@@ -136,20 +136,20 @@ _Main.java_](frontend/src/main/java/es/cheste/frontend/Main.java) para iniciar e
 
 2. Registro e inicio de sesión:
 
-* Regístrate como un nuevo usuario proporcionando tus credenciales.
-* Inicia sesión con las credenciales registradas.
+* Regístrar como un nuevo usuario proporcionando tus credenciales.
+* Iniciar sesión con las credenciales registradas.
 
 3. Gestión de entradas de diario:
 
-* Escribe en la entrada del día actual
-* Visualiza todas tus entradas
-* Imprime entradas
-* Elimina entradas
+* Escribir en la entrada del día actual
+* Visualizar todas tus entradas
+* Imprimir entradas
+* Eliminar entradas
 
-4. Cambio de contraseña:
+4. Cambiar la contraseña:
 
-* Si el usuario se olvida de su contraseña siempre podra cambiarla en la vista de iniciar sesión.
-* Se ha de escribir 2 veces la misma contraseña.
+* Si el usuario se olvida de la contraseña siempre podrá cambiarla en la vista de iniciar sesión.
+* Introducir 2 veces la misma contraseña.
 
 * * *
 
@@ -160,7 +160,7 @@ _Main.java_](frontend/src/main/java/es/cheste/frontend/Main.java) para iniciar e
 * **Maven**: Herramienta de gestión de dependencias y construcción del proyecto.
 * **PostgreSQL**: Sistema de gestión de bases de datos utilizado.
 * **JavaFX**: Framework para la creación de la interfaz de usuario del frontend.
-* **Gson**: Biblioteca para la conversión entre objetos Java y JSON.
+* **Gson**: Biblioteca para la conversión entre objetos _Java_ y _JSON_.
 * **Log4j**: Biblioteca para el registro de logs en la aplicación.
 
 * * *

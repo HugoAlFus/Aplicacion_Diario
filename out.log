@@ -13,3 +13,15 @@
 2025-02-17 13:37:08,894 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":5,"title":"dsafesdsd","content":"dfsdsfdsfdF","createdAt":"2025-02-17","filePaths":[],"userId":1}
 2025-02-17 13:37:09,040 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 1
 2025-02-17 13:37:09,051 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":5,"title":"dsafesdsd","content":"dfsdsfdsfdF","createdAt":"2025-02-17","filePaths":[],"userId":1}
+2025-02-19 13:37:10,834 INFO e.c.f.c.RegisterController [JavaFX Application Thread] {"username":"jaime","email":"jaime@gmail.com"}
+2025-02-19 13:37:10,873 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created true
+2025-02-19 13:37:10,920 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 2 and date: 2025-02-19
+2025-02-19 13:37:10,920 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 2 and date: 2025-02-19
+2025-02-19 13:37:42,125 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 2
+2025-02-19 13:37:42,155 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":6,"title":"Mi dia ","content":"Hola como estas me llamo don javier","createdAt":"2025-02-19","filePaths":["D:\\MyDiary\\Data\\jaime\\2025-02-19\\doc.txt"],"userId":2}
+2025-02-19 13:37:44,138 ERROR e.c.f.s.UserService [JavaFX Application Thread] jaime
+2025-02-19 13:37:44,139 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Path created: true
+2025-02-19 13:40:25,760 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-19 13:41:15,341 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 2
+2025-02-19 13:41:15,459 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
+2025-02-19 13:41:17,837 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
