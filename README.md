@@ -18,7 +18,7 @@
 2. [Instrucciones de uso](#instrucciones-de-uso-)
 3. [Construido con](#construido-con-)
 4. [Autor](#autor-)
-   13. [Contacto](#contacto-)
+   1. [Contacto](#contacto-)
 5. [Licencia](#licencia-)
 
 * * *
