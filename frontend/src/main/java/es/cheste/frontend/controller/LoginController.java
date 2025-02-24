@@ -39,6 +39,8 @@ public class LoginController {
     private Label lbError;
     @javafx.fxml.FXML
     private Button btnExit;
+    @javafx.fxml.FXML
+    private PasswordField pfPasswordRepeat;
 
     /**
      * Maneja los eventos de clic en los botones de la interfaz.
@@ -62,6 +64,7 @@ public class LoginController {
      * Inicia sesión del usuario con las credenciales proporcionadas.
      */
     private void logUser() {
+
         UserLoginDTO user = new UserLoginDTO(tfUsername.getText(), pfPassword.getText());
 
         String json = new Gson().toJson(user);
@@ -69,9 +72,10 @@ public class LoginController {
             if (!userService.loginUser(json).contains("Incorrect")){
                 WindowManagement.openNewWindow("/es/cheste/frontend/app/diaryApp.fxml", "My Diary", (Stage) btnLog.getScene().getWindow(), user);
             } else {
-                DialogUtil.showDialogError("Error", "Incorrect username or password", "Error login username");
+                DialogUtil.showDialogError("Error", "Incorrect username or password", "Error login user");
                 lbError.setText("Incorrect username or password");
                 pfPassword.setText(null);
+                pfPasswordRepeat.setText(null);
             }
         } catch (InterruptedException | IOException e) {
             LOGGER.error("Error logging in user: {}", e.getMessage());

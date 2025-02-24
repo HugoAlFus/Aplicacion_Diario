@@ -41,6 +41,8 @@ public class RegisterController {
     private Label lbError;
     @FXML
     private Button btnExit;
+    @FXML
+    private PasswordField pfPasswordRepeat;
 
     /**
      * Maneja los eventos de clic en los botones de la interfaz.
@@ -51,6 +53,14 @@ public class RegisterController {
     public void onClick(ActionEvent actionEvent) {
 
         if (actionEvent.getSource() == btnCreateAccount) {
+
+            if(!pfPasswordRepeat.getText().equals(pfPassword.getText())) {
+                DialogUtil.showDialogError("Error", "Password do not match", "Error login user");
+                lbError.setText("The password must be the same");
+                pfPassword.setText(null);
+                pfPasswordRepeat.setText(null);
+                return;
+            }
 
             if (!tfUsername.getText().isEmpty() || !pfPassword.getText().isEmpty() || !tfEmail.getText().isEmpty()) {
 

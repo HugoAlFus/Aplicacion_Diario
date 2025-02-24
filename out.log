@@ -25,3 +25,22 @@
 2025-02-19 13:41:15,341 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 2
 2025-02-19 13:41:15,459 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: 
 2025-02-19 13:41:17,837 ERROR e.c.f.c.DiaryAppController [JavaFX Application Thread] Error updating DiaryEntry 
+2025-02-24 14:23:31,809 INFO e.c.f.c.RegisterController [JavaFX Application Thread] {"username":"Raul","email":"raul@gmail.com"}
+2025-02-24 14:23:31,848 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created true
+2025-02-24 14:23:31,895 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 3 and date: 2025-02-24
+2025-02-24 14:23:31,895 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 3 and date: 2025-02-24
+2025-02-24 14:24:30,262 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] 3
+2025-02-24 14:24:30,288 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] {"id":7,"title":"Mi primera entrada","content":"Esta es mi primera entrada","createdAt":"2025-02-24","filePaths":["D:\\MyDiary\\Data\\Raul\\2025-02-24\\PROYECTO2DAM.pdf"],"userId":3}
+2025-02-24 14:24:39,173 ERROR e.c.f.s.UserService [JavaFX Application Thread] Raul
+2025-02-24 14:24:39,175 INFO e.c.f.c.EntryDetailsController [JavaFX Application Thread] Path created: true
+2025-02-24 14:24:42,457 WARN o.a.p.p.f.FileSystemFontProvider [JavaFX Application Thread] 6 new fonts found, font cache will be re-built
+2025-02-24 14:24:42,457 WARN o.a.p.p.f.FileSystemFontProvider [JavaFX Application Thread] Building on-disk font cache, this may take a while
+2025-02-24 14:24:43,748 WARN o.a.p.p.f.FileSystemFontProvider [JavaFX Application Thread] Finished building on-disk font cache, found 515 fonts
+2025-02-24 14:24:49,807 WARN o.a.p.p.PDDocument [JavaFX Application Thread] You are overwriting the existing file 2025-02-24.pdf, this will produce a corrupted file if you're also reading from it
+2025-02-24 14:25:28,119 INFO e.c.f.c.ChangePassword [JavaFX Application Thread] {"email":"raul@gmail.com","password":"2","confirmPassword":"2"}
+2025-02-24 14:25:28,210 INFO e.c.f.c.ChangePassword [JavaFX Application Thread] {"username":"Raul","email":"raul@gmail.com"}
+2025-02-24 14:25:34,745 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created false
+2025-02-24 14:39:20,382 INFO e.c.f.c.RegisterController [JavaFX Application Thread] {"username":"34","email":"34"}
+2025-02-24 14:39:20,425 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Data created true
+2025-02-24 14:39:20,472 ERROR e.c.f.u.ErrorManagement [JavaFX Application Thread] Error: Entry not found for userId: 4 and date: 2025-02-24
+2025-02-24 14:39:20,472 INFO e.c.f.c.DiaryAppController [JavaFX Application Thread] Diary entry not found Entry not found for userId: 4 and date: 2025-02-24
