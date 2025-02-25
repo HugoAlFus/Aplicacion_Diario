@@ -22,7 +22,7 @@ import java.io.IOException;
  * Controlador para gestionar el registro de nuevos usuarios.
  *
  * @author Hugo Almodóvar Fuster
- * @version 1.0
+ * @version 1.0.1
  */
 public class RegisterController {
 

@@ -27,7 +27,6 @@ public class WindowManagement {
 
     private static final Logger LOGGER = LogManager.getLogger(WindowManagement.class);
 
-    // Variables para almacenar el desplazamiento de la ventana
     private static double xOffset = 0;
     private static double yOffset = 0;
 
